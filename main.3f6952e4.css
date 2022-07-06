@@ -4933,7 +4933,7 @@ h2:after {
 }
 @font-face {
   font-family: dotfont;
-  src: url("assets/dotmatrixprint.otf");
+  src: url("assets/enhanced_dot_digital-7.ttf");
 }
 .hdot {
   font-family: dotfont;
