@@ -2475,6 +2475,23 @@ fieldset[disabled] a.btn {
 .open > .btn-default.dropdown-toggle {
   background-image: none;
 }
+.btn-white .badge {
+  color: transparent;
+  background-color: #fff;
+}
+.btn-white{
+  color: white;
+  background-color: transparent;
+  border-color: white;
+
+}
+.btn-white:focus,
+.btn-white:hover {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+}
+
 .btn-default.disabled.focus,
 .btn-default.disabled:focus,
 .btn-default.disabled:hover,
@@ -2486,6 +2503,18 @@ fieldset[disabled] .btn-default:focus,
 fieldset[disabled] .btn-default:hover {
   background-color: transparent;
   border-color: #000;
+}
+.btn-white.disabled.focus,
+.btn-white.disabled:focus,
+.btn-white.disabled:hover,
+.btn-white[disabled].focus,
+.btn-white[disabled]:focus,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-white.focus,
+fieldset[disabled] .btn-white:focus,
+fieldset[disabled] .btn-white:hover {
+  background-color: transparent;
+  border-color: #fff;
 }
 .btn-default .badge {
   color: transparent;
