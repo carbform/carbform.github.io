@@ -14535,6 +14535,40 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     break-inside: avoid-page;
   }
 }
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  border-color: #000;
+
+}
+.badge:empty {
+  display: none;
+}
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+.btn-white .badge {
+  color: #000;
+  background-color: #000;
+  border-color: #000;
+}
+.btn-white:focus,
+.btn-white:hover {
+  color: #000;
+  background-color: #000;
+  border-color: #000;
+}
 </style>
 
 <!-- Load mathjax -->
@@ -14572,7 +14606,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-dark="true" data-jp-theme-name="JupyterLab Dark">
-  <link href="./main.3f6952e4.css" rel="stylesheet" />
+
 
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -14581,7 +14615,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-  <a href="Andhra_rainfall_plots_dark.html" title="" class="btn btn-default"
+  <a href="Andhra_rainfall_plots_dark.html" title="" class="badge btn-white"
   >Dark Mode</a
 >
   <h4 id="Plotting-Climate-Data-:-Subsetting-a-region">This page can also be accessed at the <a href="https://github.com/carbform/Climate_Data_Plotting">GitHub repository</a> </h4>
