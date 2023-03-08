@@ -267,9 +267,9 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
-  font-family: 'Noto Sans Mono', monospace;
-  font-size: 13px;
-  line-height: 1.78;
+  font-family: 'Noto Sans';
+  font-size: 18px;
+  line-height: 2;
   color: #000;
   background-color: #fff;
 }
@@ -302,6 +302,7 @@ img {
 }
 .para {
   text-align: center;
+  font-family: Noto Sans;
 }
 .img-responsive {
   display: block;
@@ -4967,11 +4968,19 @@ h2:after {
 }
 @font-face{
   font-family: dotfont;
-  src: url("assets/enhanced_dot_digital-7.ttf");
+  src: url("assets/Ndot-55.otf");
 }
 @font-face{
-  font-family: 'Noto Sans Mono', monospace;
-  src:url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+  font-family: Noto Sans Mono;
+  src:url('assets/NType82Mono-Regular.otf');
+}
+@font-face{
+  font-family: Noto Sans;
+  src:url('assets/NType82-Regular.otf');
+}
+@font-face{
+  font-family: lettera;
+  src:url('assets/LetteraMonoLLCondLight-Regular.otf');
 }
 
 
