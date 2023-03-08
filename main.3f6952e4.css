@@ -235,6 +235,7 @@ th {
   }
   .navbar {
     display: none;
+    max-height: fit-content;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -3582,7 +3583,7 @@ tbody.collapse.in {
 @media (max-device-width: 480px) and (orientation: landscape) {
   .navbar-fixed-bottom .navbar-collapse,
   .navbar-fixed-top .navbar-collapse {
-    max-height: 200px;
+    max-height: 300px;
   }
 }
 .container-fluid > .navbar-collapse,
@@ -5223,18 +5224,18 @@ textarea {
   }
 }
 .nav > li > a {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   -webkit-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
 .nav > li > a.active,
 .nav > li > a:hover {
-  font-weight: 700;
+  font-weight: 800;
 }
 .nav.navbar-small > li > a {
-  font-size: 11px;
+  font-size: 14px;
 }
 .template-example {
   margin-bottom: 30px;
