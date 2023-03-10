@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
   <link href="./assets/favicon.ico" rel="icon">
 
-  <title>Research</title>  
+  <title>NOAA APT</title>  
 
 <link href="./main.3f6952e4.css" rel="stylesheet"></head>
 
@@ -56,66 +56,135 @@
     
           <div class="text-center">
             <h1 style="font-family: dotfont;
-            color:#000; font-size: large;">Recieving NOAA Satellite Transmissions</h1>
+            color:#000; font-size: large;">RECEIVING NOAA SATELLITE TRANSMISSIONS</h1>
           </div>
-          <p align="justify"><b>
-            Groundwater (GW) systems are dynamic with climate, where precipitation and evapotranspiration replenish and deplete
-            the aquifers, respectively. In addition to this, human adaptations change alter the groundwater characteristics in a region.
-            Thus, the spatio-temporal variations in climate and anthropogenic factors induce variability in GW systems, albeit with
-            a time lag. An inadequacy of studies regarding relationships between climate and GW has acutely restricted the ability
-            to assess the complex feedback loops between groundwater and climate change – particularly on regional scales (IPCC,
-            2007; IPCC, 2001). Also, the uncertainties in projected GW recharge originating in the hydrological models need
-            exploration (IPCC, 2014).</b>
+          <p style="font-family: Noto Sans;
+          color:#000; font-size: medium;" align="justify">The National Oceanic and Atmospheric Administration (NOAA) has a long-standing track
+            record of successfully utilizing Polar Orbiting Environmental Satellites (POES). Beyond weather forecasts, these satellites have advanced to gather environmental information for a diverse range of uses, including oceanic and
+            coastal observations, agriculture, atmospheric conditions, fire and volcanic ash monitoring, and
+            studying the space environment.
             
 
           </p>
+          <p style="font-family: Noto Sans;
+          color:#000; font-size: medium;" align="justify">The <b> Automatic Picture Transmission (APT)</b> system is a type of analog image transmission
+            system that was designed for use on meteorological satellites. It was established in the 1960s
+            and has given image data to relatively low-cost user stations in most nations worldwide for the
+            past five decades. A user station anywhere in the world can receive local data from each satellite
+            as it passes nearly overhead at least twice daily. Currently, I receive data from the <b>NOAA 15,
+              18, and 19 </b> which are the only ones still transmitting APT.
+            
+
+          </p>
+
   
         </div>
       </div>
-            <!-- <img src="assets/images/grace.jpg" class="img-responsive2" alt=""> -->
-            <center><iframe src="grace_fig.html" width="1200" height="800" frameborder="0"></iframe></center>
+          <img src="assets/images/download5.jpeg" class="img-responsive" alt=""> 
+          
 
-              <p class="para">
-                Trends in Groundwater storage
-                anomalies (cm/yr) between 2003-2016. Computed using GRACE Spherical HArmonic TWS and GLDAS Soil Moisture data.
-
+              <p class="para" style="font-family: Noto Sans; font-size: small; color: blue;">
+                <b>Using a suitable antenna, RTL-SDR dongle and SDR software (such as GQRX), we can acquire the NOAA-18 APT signal 137.9125
+                  MHz. The incoming signal which is visible on the FFT spectrum and the waterfall is recorded as
+                  a WAV audio file for further processing.</b>
               </p>
             
       <div class="row">
-                <iframe src="my_fig.html" width="585" height="370" frameborder="0" align="left" scrolling="no"></iframe>
-                <iframe src="fig2.html" width="585" height="370" frameborder="0" align="right" scrolling="no"></iframe>
+        <img src="assets/images/download4.jpeg" class="img-responsive" alt="">
+        <p class="para" style="font-family: Noto Sans; font-size: small; color: blue;">
+          <b>The WAV file can be directly proccessed using the noaa-apt tool. 
+            Alternatively, it can be resampled for further processing using WxToImg.
+          After decoding, the images from two transmission channels (generally 1 and 4) of the NOAA sensors are generated.
+        Further enhancements can be made to generate False Color Composites (FCC) and Multispectral imagery.</b>
+        </p>
       </div>            
-           
-            <p align="justify"> <b>There is some evidence suggesting a dynamic relationship
-              between the ENSO and the Indian Summer Monsoon (ISMR).
-              Therefore, the complex teleconnections between such climatic
-              modes and the ISMR can potentially propagate to groundwater
-              systems via changes in the monsoon precipitation patterns.
-              However, only a handful of studies have investigated climate
-              and groundwater teleconnections in the Indian context. As a
-              result, the influence of climate on local GW recharge
-              and extraction patterns in various parts of the country is relatively unexplored.</b></p>
+     
 
-              <center><div class="flourish-embed flourish-map" 
-                data-src="visualisation/12139920"><script src="https://public.flourish.studio/resources/embed.js">
-                </script></div></center>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
+          
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="assets/images/n1.jpeg" alt="NOAA-18">
+            <div class="carousel-caption">
+              <h3 style="font-family: dotfont;">NOAA -18 on Feb 7, 2023</h3>
+              
+            </div>
+          </div>
+      
+          <div class="item">
+            <img src="assets/images/n2.jpeg" alt="NOAA-18">
+            <div class="carousel-caption">
+              <h3 style="font-family: dotfont;">NOAA -18 on Feb 15, 2023</h3>
+             
+            </div>
+          </div>
+      
+          <div class="item">
+            <img src="assets/images/n3.jpeg" alt="NOAA-18">
+            <div class="carousel-caption">
+              <h3 style="font-family: dotfont;">NOAA -18 on Feb 16, 2023</h3>
+              
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="assets/images/n4.jpeg" alt="NOAA-18">
+            <div class="carousel-caption">
+              <h3 style="font-family: dotfont;">NOAA -18 on Feb 23, 2023</h3>
+              
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/n5.jpeg" alt="NOAA-18">
+            <div class="carousel-caption">
+              <h3 style="font-family: dotfont;">NOAA -18 on Mar 3, 2023</h3>
+              
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/n6.jpeg" alt="NOAA-18">
+            <div class="carousel-caption">
+              <h3 style="font-family: dotfont;">NOAA -19 on Feb 20, 2023</h3>
+              
+            </div>
+          </div>
+         
+
+
+
+
+
+
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class=""><b><</b></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class=""><b>></b></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
                  
           
 
 
       <div class="col-xs-12">
-     <p align="justify"><b>Until recently, the lack of groundwater data has hampered the advancement of similar studies in India.
-      However, concerted field campaigns and efforts to set up long-term monitoring stations by government
-      agencies and academic institutions have resulted in multidecadal groundwater data availability. In
-      particular, the central Indian region has robustly built meteorological and groundwater datasets. In
-      addition, the heterogeneity of groundwater aquifer systems in the central Indian region enables a better
-      understanding of spatial and temporal distributions of feedback processes. From a climate variability
-      perspective, parts of arid and semi-arid areas of western and peninsular India are potential groundwater
-      hotspots that are likely to face groundwater stress in the future. However, the climatic variabilities in these regions would not confine their effects
-      on regional aquifer systems. So, considering these factors, the proposed study is intended to focus on the central Indian region primarily. We intend to study the effects of the prevailing dry climate on the groundwater resources which are
-      already under stress. We expect to model and study scenarios where groundwater depletion causes
-      results in feedback to the regional climate.</b></p>
+     
     </div>
 
     </div>
@@ -127,7 +196,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <p style="font-family:dotfont">© Sarat Chandra, 2023 | All images are IP. All rights reserved</p>
+        <p style="font-family:dotfont">© SARAT CHANDRA, 2023 | USES NOTHING (R) FONTS</p>
       </div>
     </div>
   </div>
@@ -153,5 +222,6 @@
 </script>
 
 --> <script type="text/javascript" src="./main.70a66962.js"></script></body>
+       <script src="myscripts.js"></script>
 
 </html>

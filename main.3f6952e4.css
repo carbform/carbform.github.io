@@ -2482,17 +2482,14 @@ fieldset[disabled] a.btn {
   background-color: #fff;
 }
 .btn-white{
-  color: white;
+  color: rgb(0, 0, 0);
   background-color: transparent;
-  border-color: white;
+  border-color: rgb(0, 0, 0);
+  font-family: Noto Sans Mono;
+  font-size: smaller;
 
 }
 .btn-white:focus,
-.btn-white:hover {
-  color: #000;
-  background-color: #fff;
-  border-color: #fff;
-}
 
 .btn-default.disabled.focus,
 .btn-default.disabled:focus,
@@ -5274,5 +5271,7 @@ textarea {
   margin-right: auto;
   width: 100%;
 }
+
+
 
 /*# sourceMappingURL=main.70a66962.map*/
