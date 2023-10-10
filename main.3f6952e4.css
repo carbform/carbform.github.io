@@ -4996,6 +4996,8 @@ h1,
 h2,
 h3 {
   margin-bottom: 20px;
+  color: #e60606;
+  font-weight: 700;
 }
 blockquote {
   font-family: 'Noto Sans Mono', monospace;
