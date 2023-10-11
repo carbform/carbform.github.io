@@ -4496,12 +4496,19 @@ button.close {
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #fff;
+  color: #e20808;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  left: 10%;
+  right: 65%;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  background-color: rgb(236, 6, 6);
 }
 .carousel-caption .btn {
   text-shadow: none;
+  background-color: rgb(221, 11, 11);
+  padding: 0px;
 }
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
@@ -4519,12 +4526,15 @@ button.close {
   }
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
-    margin-right: -10px;
+    margin-right: 10px;
   }
   .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
+    left: 10%;
+    right: 65%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    background-color: rgb(194, 16, 16);
+   
   }
   .carousel-indicators {
     bottom: 20px;
@@ -4996,7 +5006,7 @@ h1,
 h2,
 h3 {
   margin-bottom: 20px;
-  color: #e60606;
+  color: #ffffff;
   font-weight: 700;
 }
 blockquote {
