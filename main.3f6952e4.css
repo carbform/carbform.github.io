@@ -3995,7 +3995,7 @@ fieldset[disabled] .navbar-default .btn-link:hover {
 .navbar-inverse .navbar-nav > .open > a:focus,
 .navbar-inverse .navbar-nav > .open > a:hover {
   background-color: transparent;
-  color: #070000;
+  color: #ff0000;
 }
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
@@ -4005,7 +4005,7 @@ fieldset[disabled] .navbar-default .btn-link:hover {
     background-color: transparent;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: #080000;
+    color: #fd0000;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus,
@@ -4895,8 +4895,8 @@ body.minimal {
 .btn-default:focus,
 .btn-default:hover {
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #f00404;
+  border-color: #000000;
 }
 .btn-primary:focus,
 .btn-primary:hover {
@@ -5195,7 +5195,7 @@ textarea {
 .navbar-inverse .navbar-toggle,
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle:hover {
-  background-color: #080000;
+  background-color: #ff0000;
 }
 .navbar-default .navbar-nav {
   border-bottom: 1px solid #eee;
@@ -5229,7 +5229,7 @@ textarea {
     background-color: transparent;
   }
   .navbar-default .navbar-collapse {
-    background-color: #fff;
+    background-color: #ffffff;
   }
 }
 .nav > li > a {
