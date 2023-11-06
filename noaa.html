@@ -74,18 +74,22 @@
 
   
         </div>
+        </div>
+      <div>
+        <img src="assets/images/noaa/setup.png" class="img-responsive" alt=""> 
       </div>
-          <img src="assets/images/noaa/setup.png" class="img-responsive" alt=""> 
+          
           
 
-              <p  style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);"align="justify">
-                Using a suitable antenna, RTL-SDR dongle and SDR software (such as <a href="https://gqrx.dk/">GQRX</a>), 
+        <p  style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);"align="justify">
+               Using a suitable antenna, RTL-SDR dongle and SDR software (such as <a href="https://gqrx.dk/">GQRX</a>), 
                   we can acquire the NOAA APT and Meteor QPSK signals between 137-138 Mhz.
                   The incoming signal which is visible on the FFT spectrum and the waterfall is recorded as
                   a WAV audio (FM demodulation) / baseband (for Meteor) file for further processing. The WAV file can be directly proccessed using the <a href="https://noaa-apt.mbernardi.com.ar/">noaa-apt</a> tool. 
                   Alternatively, it can be resampled for further processing using <a href="https://wxtoimgrestored.xyz/">WxToImg</a> or <a href="https://www.satdump.org/posts/1.1.0-release/">SatDump</a>.
                 
-                </p> <p style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);"align="justify">
+        </p> 
+          <p style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);"align="justify">
                   After demodulation, we get the raw images from two transmission channels (generally red and near/far infrared) captured by the AVHRR sensors onborad NOAA satellites.
                   Further enhancements can be made to these two channels to generate False Color Composites (FCC)/Multispectral imagery. However, Meteor transmissions have
                 3 channels (generally 2 visible, 1 infrared) and so the generated images are true color composites.</p> 
