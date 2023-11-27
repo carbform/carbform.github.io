@@ -11,94 +11,105 @@
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
-  
+
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
   <link href="./assets/favicon.ico" rel="icon">
 
-  <title>NOAA APT</title>  
+  <title>NOAA APT</title>
 
-<link href="./main.3f6952e4.css" rel="stylesheet"></head>
+  <link href="./main.3f6952e4.css" rel="stylesheet">
+</head>
 
 <body class="">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-<!-- Add your content of header -->
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-default">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
+  <!-- Add your content of header -->
+  <header>
+    <nav class="navbar  navbar-fixed-top navbar-default">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+          aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
 
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">Home</a></li>
-          <li><a href="./about.html" title="">About</a></li>
-          <li><a href="./pmrf.html" title="">Research</a></li>
-          <li><a href="./works.html" title="">Projects</a></li>
-          <li><a href="./downloads.html" title="">Resources</a></li>
-          <li><a href="./music.html" title="">My Music</a></li>
-          <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
-        </ul>
-      </div> 
-    </div>
-  </nav>
-</header>
-<div class="section-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-    
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav ">
+            <li><a href="./index.html" title="">Home</a></li>
+            <li><a href="./about.html" title="">About</a></li>
+            <li><a href="./pmrf.html" title="">Research</a></li>
+            <li><a href="./works.html" title="">Projects</a></li>
+            <li><a href="./downloads.html" title="">Resources</a></li>
+            <li><a href="./music.html" title="">My Music</a></li>
+            <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+
           <div class="text-center">
             <h1 style="font-family: dotfont;
             color:#000; font-size: x-large;">RECEIVING DATA FROM WEATHER SATELLITES</h1>
           </div>
-      
+
           <p style="font-family: Noto Sans;
-          color:#000; font-size: medium;" align="justify">The <b> Automatic Picture Transmission (<a href="https://www.sigidwiki.com/wiki/Automatic_Picture_Transmission_(APT)">APT</a>)</b> system is a type of analog image transmission
+          color:#000; font-size: medium;" align="justify">The <b> Automatic Picture Transmission (<a
+                href="https://www.sigidwiki.com/wiki/Automatic_Picture_Transmission_(APT)">APT</a>)</b> system is a type
+            of analog image transmission
             system that was designed for use on meteorological satellites. It was established in the 1960s
             and has given image data to relatively low-cost user stations in most nations worldwide for the
             past five decades. A user station anywhere in the world can receive local data from each satellite
             as it passes nearly overhead at least twice daily. Currently, I receive data from the <b>NOAA 15,
-              18, and 19 </b> which are the only ones still transmitting APT. 
-              I also recieve data from the Russian weather satellite <b>Meteor M N2-3</b> which transmits digitally (<b><a href="https://www.sigidwiki.com/wiki/Low_Rate_Picture_Transmission_(LRPT)">LRPT</a></b>) and has a higher bandwidth and more channels compared to APT.
+              18, and 19 </b> which are the only ones still transmitting APT.
+            I also recieve data from the Russian weather satellite <b>Meteor M N2-3</b> which transmits digitally (<b><a
+                href="https://www.sigidwiki.com/wiki/Low_Rate_Picture_Transmission_(LRPT)">LRPT</a></b>) and has a
+            higher bandwidth and more channels compared to APT.
 
-            
+
 
           </p>
 
-  
-        </div>
-        </div>
-      <div>
-        <img src="assets/images/noaa/setup.png" class="img-responsive" alt=""> 
-      </div>
-          
-          
 
-        <p  style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);"align="justify">
-               Using a suitable antenna, RTL-SDR dongle and SDR software (such as <a href="https://gqrx.dk/">GQRX</a>), 
-                  we can acquire the NOAA APT and Meteor QPSK signals between 137-138 Mhz.
-                  The incoming signal which is visible on the FFT spectrum and the waterfall is recorded as
-                  a WAV audio (FM demodulation) / baseband (for Meteor) file for further processing. The WAV file can be directly proccessed using the <a href="https://noaa-apt.mbernardi.com.ar/">noaa-apt</a> tool. 
-                  Alternatively, it can be resampled for further processing using <a href="https://wxtoimgrestored.xyz/">WxToImg</a> or <a href="https://www.satdump.org/posts/1.1.0-release/">SatDump</a>.
-                
-        </p> 
-          <p style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);"align="justify">
-                  After demodulation, we get the raw images from two transmission channels (generally red and near/far infrared) captured by the AVHRR sensors onborad NOAA satellites.
-                  Further enhancements can be made to these two channels to generate False Color Composites (FCC)/Multispectral imagery. However, Meteor transmissions have
-                3 channels (generally 2 visible, 1 infrared) and so the generated images are true color composites.</p> 
-              
-            
-       <div class="row">
-        
-      </div>            
-     
+        </div>
+      </div>
+      <div>
+        <img src="assets/images/noaa/setup.png" class="img-responsive" alt="">
+      </div>
+
+
+
+      <p style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);" align="justify">
+        Using a suitable antenna, RTL-SDR dongle and SDR software (such as <a href="https://gqrx.dk/">GQRX</a>),
+        we can acquire the NOAA APT and Meteor QPSK signals between 137-138 Mhz.
+        The incoming signal which is visible on the FFT spectrum and the waterfall is recorded as
+        a WAV audio (FM demodulation) / baseband (for Meteor) file for further processing. The WAV file can be directly
+        proccessed using the <a href="https://noaa-apt.mbernardi.com.ar/">noaa-apt</a> tool.
+        Alternatively, it can be resampled for further processing using <a
+          href="https://wxtoimgrestored.xyz/">WxToImg</a> or <a
+          href="https://www.satdump.org/posts/1.1.0-release/">SatDump</a>.
+
+      </p>
+      <p style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);" align="justify">
+        After demodulation, we get the raw images from two transmission channels (generally red and near/far infrared)
+        captured by the AVHRR sensors onborad NOAA satellites.
+        Further enhancements can be made to these two channels to generate False Color Composites (FCC)/Multispectral
+        imagery. However, Meteor transmissions have
+        3 channels (generally 2 visible, 1 infrared) and so the generated images are true color composites.</p>
+
+
+      <div class="row">
+
+      </div>
+
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -112,100 +123,92 @@
           <li data-target="#myCarousel" data-slide-to="6"></li>
           <li data-target="#myCarousel" data-slide-to="7"></li>
           <li data-target="#myCarousel" data-slide-to="8"></li>
-          <li data-target="#myCarousel" data-slide-to="9"></li>
-          <li data-target="#myCarousel" data-slide-to="10"></li>
         </ol>
-      
+
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <img src="assets/images/noaa/n1.jpeg" alt="NOAA-18">
+            <img
+              src="https://raw.githubusercontent.com/carbform/noaa_meteor_images/main/NOAA/noaa_18_11_oct_2023_fcc.png"
+              alt="NOAA-18">
+
             <div class="carousel-caption">
-              <h3 style="font-family: dotfont;">NOAA -18 on Feb 7, 2023</h3>
-              
-            </div>
-          </div>
-      
-          <div class="item">
-            <img src="assets/images/noaa/n2.jpeg" alt="NOAA-18">
-            <div class="carousel-caption">
-              <h3 style="font-family: dotfont;">NOAA -18 on Feb 15, 2023</h3>
-             
-            </div>
-          </div>
-      
-          <div class="item">
-            <img src="assets/images/noaa/n3.jpeg" alt="NOAA-18">
-            <div class="carousel-caption">
-              <h3 style="font-family: dotfont;">NOAA -18 on Feb 16, 2023</h3>
-              
+              <h3 style="font-family: dotfont;">NOAA-18 on Oct 11, 2023</h3>
+
             </div>
           </div>
 
           <div class="item">
-            <img src="assets/images/noaa/n4.jpeg" alt="NOAA-18">
+            <img src="https://raw.githubusercontent.com/carbform/noaa_meteor_images/main/18oct2023/avhrr_apt_rgb_MCIR_Rain_map.png" alt="NOAA-18">
             <div class="carousel-caption">
-              <h3 style="font-family: dotfont;">NOAA -18 on Feb 23, 2023</h3>
-              
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/noaa/n5.jpeg" alt="NOAA-18">
-            <div class="carousel-caption">
-              <h3 style="font-family: dotfont;">NOAA -18 on Mar 3, 2023</h3>
-              
-            </div>
-          </div>
-    
-          
-          <div class="item">
-            <img src="assets/images/noaa/n9.png" alt="NOAA-18">
-            <div class="carousel-caption">
-              <h3 style="font-family: dotfont;">NOAA -18 on July 30, 2023 (Indian Monsoon Season)</h3> 
+              <h3 style="font-family: dotfont">NOAA-19 on Oct 18, 2023</h3>
             </div>
           </div>
 
           <div class="item">
-            <img src="assets/images/noaa/noaa_19_10_oct_2023_fcc.png" alt="NOAA-19">
+            <img src="https://raw.githubusercontent.com/carbform/noaa_meteor_images/main/30oct2023/crop_fcc_221.png"
+              alt="NOAA-18">
             <div class="carousel-caption">
-              <h3 style="font-family: dotfont">NOAA-19 on Oct 10, 2023</h3> 
-            </div>
-          </div>
-          
-          <div class="item">
-            <img src="assets/images/noaa/noaa_18_11_oct_2023_fcc.png" alt="NOAA-18">
-            <div class="carousel-caption">
-              <h3 style="font-family: dotfont">NOAA-18 on Oct 11, 2023</h3> 
+              <h3 style="font-family: dotfont;">Meteor N2-3 on Oct 30, 2023</h3>
+
             </div>
           </div>
 
           <div class="item">
-            <img src="assets/images/noaa/meteor_13_oct_2023_comp.png" alt="Meteor">
+            <img src="https://raw.githubusercontent.com/carbform/noaa_meteor_images/main/2023-11-03_03-48_noaa_apt_137Mhz/fcc.png" alt="Meteor">
             <div class="carousel-caption">
-              <h3 style="font-family: dotfont">Meteor M2-3 on Oct 13, 2023</h3> 
+              <h3 style="font-family: dotfont">NOAA-19 on Nov 3, 2023</h3>
+            </div>
+          </div>
+
+          <div class="item">
+            <img
+              src="https://raw.githubusercontent.com/carbform/noaa_meteor_images/main/8nov2023/2023-11-08_03-49_meteor_m2-x_lrpt_137Mhz/fcc_221.png"
+              alt="NOAA-18">
+            <div class="carousel-caption">
+              <h3 style="font-family: dotfont;">Meteor N2-3 on Nov 8, 2023</h3>
+
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="https://raw.githubusercontent.com/carbform/noaa_meteor_images/main/20nov2023/mcir_rain.png"
+              alt="NOAA-18">
+            <div class="carousel-caption">
+              <h3 style="font-family: dotfont;">NOAA-18 on Nov 20, 2023 (Retreating Monsoon)</h3>
+
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/noaa/crop_fcc_221.png" alt="Meteor">
+            <img src="https://raw.githubusercontent.com/carbform/noaa_meteor_images/main/22nov2023/mcir_rain.png"
+              alt="NOAA-18">
             <div class="carousel-caption">
-              <h3 style="font-family: dotfont">Meteor M2-3 on Oct 30, 2023</h3> 
+              <h3 style="font-family: dotfont;">NOAA-18 on Nov 22, 2023</h3>
+
             </div>
           </div>
+
+
           <div class="item">
-            <img src="assets/images/noaa/fcc.png" alt="Meteor">
+            <img src="https://raw.githubusercontent.com/carbform/noaa_meteor_images/main/24nov2023/NO.png"
+              alt="NOAA-18">
             <div class="carousel-caption">
-              <h3 style="font-family: dotfont">NOAA-19 on Nov 3, 2023</h3> 
+              <h3 style="font-family: dotfont;">NOAA-15 on Nov 24, 2023</h3>
             </div>
           </div>
-          
 
+          <div class="item">
+            <img src="https://raw.githubusercontent.com/carbform/noaa_meteor_images/main/25nov2023/221.png"
+              alt="NOAA-19">
+            <div class="carousel-caption">
+              <h3 style="font-family: dotfont">Meteor N2-3 on Nov 25, 2023</h3>
+            </div>
+          </div>
 
-
-
-
+        
 
         </div>
-      
+
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
           <span class=""><b>‹</b></span>
@@ -217,36 +220,37 @@
         </a>
       </div>
 
-                 
-          
+
+
 
 
       <div class="col-xs-12">
-     <p  align="center" style="font-family: lettera; color: rgb(255, 1, 1); font-size: medium;">I'll be updating these images once in a while.</p>
-    </div>
+        <p align="center" style="font-family: lettera; color: rgb(255, 1, 1); font-size: medium;">I'll be updating these
+          images once in a while.</p>
+      </div>
 
     </div>
   </div>
-</div>
+  </div>
 
 
-<footer class="footer-container text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <p style="font-family:dotfont;color: rgb(255, 1, 1)">© SARAT CHANDRA, 2023 | USES NOTHING (R) FONTS</p>
+  <footer class="footer-container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p style="font-family:dotfont;color: rgb(77, 1, 255)">© SARAT CHANDRA, 2023 | USES NOTHING (R) FONTS</p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     navActivePage();
-  });
-</script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navActivePage();
+    });
+  </script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
 
 <script>
   (function (i, s, o, g, r, a, m) {
@@ -259,7 +263,9 @@
   ga('send', 'pageview');
 </script>
 
---> <script type="text/javascript" src="./main.70a66962.js"></script></body>
-       <script src="myscripts.js"></script>
+-->
+  <script type="text/javascript" src="./main.70a66962.js"></script>
+</body>
+<script src="myscripts.js"></script>
 
 </html>
