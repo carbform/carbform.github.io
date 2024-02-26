@@ -52,29 +52,19 @@
     <script type="text/javascript" src="./main.70a66962.js"></script>
 
     <script>
-        // Function to fetch image URLs from the server
-        async function fetchImageUrls() {
-            const response = await fetch('/assets/images/noaa/');
-            const html = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const imgElements = doc.querySelectorAll('a[href$=".jpg"]');
-            const imgUrls = [];
-            imgElements.forEach(element => {
-                let imageUrl = element.getAttribute('href');
-                // Append the base URL only if the URL doesn't start with it
-                if (!imageUrl.startsWith('/assets/images/noaa/')) {
-                    imageUrl = '/assets/images/noaa/' + imageUrl;
-                }
-                imgUrls.push(imageUrl);
-            });
-            console.log(imgUrls); // Log the fetched image URLs for debugging
-            return imgUrls;
+        // Function to fetch image URLs from the file
+        async function fetchImageUrlsFromFile() {
+            const response = await fetch('image_urls.txt'); // Update the path accordingly
+            const text = await response.text();
+            // Split the text into an array of image URLs
+            const imageUrls = text.split('\n').filter(url => url.trim() !== '');
+            console.log(imageUrls); // Log the fetched image URLs for debugging
+            return imageUrls;
         }
     
-        // Function to update the carousel with random images
+        // Function to update the carousel with images
         async function updateCarousel() {
-            const imageUrls = await fetchImageUrls();
+            const imageUrls = await fetchImageUrlsFromFile();
             const carouselInner = document.getElementById('carouselInner');
             carouselInner.innerHTML = ''; // Clear existing slides
             imageUrls.forEach((imageUrl, i) => {
@@ -91,9 +81,7 @@
             });
         }
     
-    
-    
-        // Initial call to updateCarousel function when the page loads
+        // Call updateCarousel function when the page loads
         window.onload = function () {
             updateCarousel();
         };
