@@ -52,51 +52,56 @@
     <script type="text/javascript" src="./main.70a66962.js"></script>
 
     <script>
-// Function to fetch image URLs from the server
-async function fetchImageUrls() {
-    const response = await fetch('/assets/images/noaa/');
-    const html = await response.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const imgElements = doc.querySelectorAll('a[href$=".jpg"]');
-    const imgUrls = [];
-    imgElements.forEach(element => {
-        let imageUrl = element.getAttribute('href');
-        imgUrls.push(imageUrl);
-    });
-    console.log(imgUrls); // Log the fetched image URLs for debugging
-    return imgUrls;
-}
-
-// Function to update the carousel with random images
-async function updateCarousel() {
-    const imageUrls = await fetchImageUrls();
-    const carouselInner = document.getElementById('carouselInner');
-    carouselInner.innerHTML = ''; // Clear existing slides
-    for (let i = 0; i < imageUrls.length; i++) {
-        const slide = document.createElement('div');
-        slide.className = 'item';
-        if (i === 0) {
-            slide.classList.add('active'); // Make the first slide active
+        // Function to fetch image URLs from the server
+        async function fetchImageUrls() {
+            const response = await fetch('/assets/images/noaa/');
+            const html = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const imgElements = doc.querySelectorAll('a[href$=".jpg"]');
+            const imgUrls = [];
+            imgElements.forEach(element => {
+                let imageUrl = element.getAttribute('href');
+                // Append the base URL only if the URL doesn't start with it
+                if (!imageUrl.startsWith('/assets/images/noaa/')) {
+                    imageUrl = '/assets/images/noaa/' + imageUrl;
+                }
+                imgUrls.push(imageUrl);
+            });
+            console.log(imgUrls); // Log the fetched image URLs for debugging
+            return imgUrls;
         }
-        const img = document.createElement('img');
-        img.src = window.location.origin + imageUrls[i];
-        img.alt = 'Slide ' + (i + 1);
-        slide.appendChild(img);
-        carouselInner.appendChild(slide);
-    }
-}
-
-// Call updateCarousel function when the page loads
-window.onload = function () {
-    updateCarousel();
-};
-
     
+        // Function to update the carousel with random images
+        async function updateCarousel() {
+            const imageUrls = await fetchImageUrls();
+            const carouselInner = document.getElementById('carouselInner');
+            carouselInner.innerHTML = ''; // Clear existing slides
+            imageUrls.forEach((imageUrl, i) => {
+                const slide = document.createElement('div');
+                slide.className = 'item';
+                if (i === 0) {
+                    slide.classList.add('active'); // Make the first slide active
+                }
+                const img = document.createElement('img');
+                img.src = imageUrl; // Use the fetched image URL directly
+                img.alt = 'Slide ' + (i + 1);
+                slide.appendChild(img);
+                carouselInner.appendChild(slide);
+            });
+        }
     
+        // Call updateCarousel function every 2 seconds
+        setInterval(updateCarousel, 2000);
     
-    
+        // Initial call to updateCarousel function when the page loads
+        window.onload = function () {
+            updateCarousel();
+        };
     </script>
+    
+    
+    
 
 </body>
 
