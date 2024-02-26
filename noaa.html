@@ -82,20 +82,22 @@
         </div>
       </div>
       <div>
-        <img src="assets/images/spec.png" class="img-responsive" alt="">
+        <img src="assets/images/new_setup.png" class="img-responsive" alt="">
+      </div>
+      <div>
+        <p style="font-family:dotfont">SHORT EXPLANATION</p>
       </div>
 
 
 
       <p style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);" align="justify">
-        Using a suitable antenna, RTL-SDR dongle and SDR software (such as <a href="https://gqrx.dk/">GQRX</a>),
-        we can acquire the NOAA APT and Meteor QPSK signals between 137-138 Mhz.
+        Using a suitable antenna, RTL-SDR dongle and SDR software (such as <a href="https://gqrx.dk/">GQRX</a> or <a href="https://www.satdump.org/">SatDump</a>),
+        we can acquire the NOAA APT and Meteor QPSK signals.
         The incoming signal which is visible on the FFT spectrum and the waterfall is recorded as
         a WAV audio (FM demodulation) / baseband (for Meteor) file for further processing. The WAV file can be directly
         proccessed using the <a href="https://noaa-apt.mbernardi.com.ar/">noaa-apt</a> tool.
-        Alternatively, it can be resampled for further processing using <a
-          href="https://wxtoimgrestored.xyz/">WxToImg</a> or <a
-          href="https://www.satdump.org/posts/1.1.0-release/">SatDump</a>.
+         Alternatively, SatDump can be used to recieve and procces these signals in one go. This proccess can also be automated (my current setup) using the <a
+         href="https://github.com/jekhokie/raspberry-noaa-v2">RaspiNOAA V2</a> on a Raspberry Pi.
 
       </p>
       <p style="font-family: Noto Sans; font-size: medium; color: rgb(0, 0, 0);" align="justify">
@@ -104,22 +106,33 @@
         Further enhancements can be made to these two channels to generate False Color Composites (FCC)/Multispectral
         imagery. However, Meteor transmissions have
         3 channels (generally 2 visible, 1 infrared) and so the generated images are true color composites.</p>
-
+        
+        An excellent guide is available here if you want to try this out for yourself : 
+        <a
+        href="https://www.a-centauri.com/articoli/noaa-poes-satellites-reception">Jacopo's Lair
+      </a>
 
       <div class="row">
 
       </div>
 
+      <div>
+        <p style="font-family:dotfont font-size: x-large"></p>
+      </div>
+      
+      <div>
+        <p style="font-size: x-large">RECENT IMAGES</p>
+      </div>
 
-      <iframe src="carousel.html" width="100%" height="1200px" frameborder="0"></iframe>
+      <iframe  src="carousel.html" width="100%" height="800px" frameborder="0"></iframe>
 
 
 
 
 
       <div class="col-xs-12">
-        <p align="center" style="font-family: lettera; color: rgb(255, 1, 1); font-size: medium;">I'll be updating these
-          images once in a while.</p>
+        <p align="center" style="font-family: lettera; color: rgb(255, 1, 1); font-size: medium;">The weather satellite images are automatically updated once every 3 days
+          .</p>
       </div>
 
     </div>
@@ -131,7 +144,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <p style="font-family:dotfont;color: rgb(77, 1, 255)">© SARAT CHANDRA, 2023 | USES NOTHING (R) FONTS</p>
+          <p style="font-family:dotfont;color: rgb(0, 0, 0)">© SARAT CHANDRA, 2023 | USES NOTHING (R) FONTS</p>
         </div>
       </div>
     </div>
