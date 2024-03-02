@@ -57,7 +57,7 @@
             const response = await fetch('image_urls.txt'); // Update the path accordingly
             const text = await response.text();
             // Split the text into an array of image URLs
-            const imageUrls = text.split('\n').filter(url => url.trim() !== '');
+            const imageUrls = text.split('\n').filter(url => url.trim().endsWith('.jpg'));
             console.log(imageUrls); // Log the fetched image URLs for debugging
             return imageUrls;
         }
@@ -86,6 +86,8 @@
             updateCarousel();
         };
     </script>
+    
+
     
     
     
