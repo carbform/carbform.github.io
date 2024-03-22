@@ -56,10 +56,12 @@
         async function fetchImageUrlsFromFile() {
             const response = await fetch('image_urls.txt'); // Update the path accordingly
             const text = await response.text();
-            // Split the text into an array of image URLs
-            const imageUrls = text.split('\n').filter(url => url.trim().endsWith('.jpg'));
-            console.log(imageUrls); // Log the fetched image URLs for debugging
-            return imageUrls;
+            // Split the text into an array of image URLs and filter out non-JPG URLs
+            let imageUrls = text.split('\n').filter(url => url.trim().endsWith('.jpg'));
+            // Shuffle the array to get random URLs
+            imageUrls = shuffle(imageUrls);
+            // Return only the first 10 URLs
+            return imageUrls.slice(0, 10);
         }
     
         // Function to update the carousel with images
@@ -85,6 +87,15 @@
         window.onload = function () {
             updateCarousel();
         };
+    
+        // Function to shuffle an array
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
     </script>
     
 

@@ -124,9 +124,73 @@
         <p style="font-size: x-large">RECENT IMAGES</p>
       </div>
 
-      <iframe  src="carousel.html" width="100%" height="800px" frameborder="0"></iframe>
+      <!-- <iframe  src="carousel.html" width="100%" height="800px" frameborder="0"></iframe> -->
 
 
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" id="carouselInner">
+            <!-- Slides will be dynamically generated here -->
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class=""><b>‹</b></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class=""><b>›</b></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <script type="text/javascript" src="./main.70a66962.js"></script>
+
+    <script>
+        // Function to fetch image URLs from the file
+        async function fetchImageUrlsFromFile() {
+            const response = await fetch('image_urls.txt'); // Update the path accordingly
+            const text = await response.text();
+            // Split the text into an array of image URLs and filter out non-JPG URLs
+            let imageUrls = text.split('\n').filter(url => url.trim().endsWith('.jpg'));
+            // Shuffle the array to get random URLs
+            imageUrls = shuffle(imageUrls);
+            // Return only the first 10 URLs
+            return imageUrls.slice(0, 10);
+        }
+    
+        // Function to update the carousel with images
+        async function updateCarousel() {
+            const imageUrls = await fetchImageUrlsFromFile();
+            const carouselInner = document.getElementById('carouselInner');
+            carouselInner.innerHTML = ''; // Clear existing slides
+            imageUrls.forEach((imageUrl, i) => {
+                const slide = document.createElement('div');
+                slide.className = 'item';
+                if (i === 0) {
+                    slide.classList.add('active'); // Make the first slide active
+                }
+                const img = document.createElement('img');
+                img.src = imageUrl; // Use the fetched image URL directly
+                img.alt = 'Slide ' + (i + 1);
+                slide.appendChild(img);
+                carouselInner.appendChild(slide);
+            });
+        }
+    
+        // Call updateCarousel function when the page loads
+        window.onload = function () {
+            updateCarousel();
+        };
+    
+        // Function to shuffle an array
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+    </script>
 
 
 
