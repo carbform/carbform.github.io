@@ -36,6 +36,7 @@ https://carbform.github.io/assets/images/noaa/NOAA-18-20240301-225822-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240313-092957-NOAA_Natural_Color.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240319-223549-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240313-092957-MCIR_Rain.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240422-041259-MCIR_Rain.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240406-210339-321_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240322-092027-sea.jpg
 https://carbform.github.io/assets/images/noaa/update.sample
@@ -72,6 +73,7 @@ https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240312-093445-124_co
 https://carbform.github.io/assets/images/noaa/METEOR-M2-4-20240304-032637-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240322-092027-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240329-110120-NO.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240422-053422-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240320-205539-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240407-104957-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240306-104528-histeq.jpg
@@ -90,6 +92,7 @@ https://carbform.github.io/assets/images/noaa/METEOR-M2-4-20240414-145549-321_co
 https://carbform.github.io/assets/images/noaa/prepare-commit-msg.sample
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240225-204727-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240320-205539-NO.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240423-040041-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240405-222533-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240331-091053-NO.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240327-211028-sea.jpg
@@ -135,9 +138,11 @@ https://carbform.github.io/assets/images/noaa/NOAA-18-20240327-223654-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240303-210219-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240225-093637-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240223-224438-NO.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240422-053422-MCIR_projected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240406-110223-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240303-210219-NO.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240305-105751-therm.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240422-053422-MCIR_Rain.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240419-225218-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240225-222001-therm.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240312-093445-4_corrected.jpg
@@ -148,6 +153,7 @@ https://carbform.github.io/assets/images/noaa/NOAA-19-20240305-092711-sea.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240411-212759-sea.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240418-212640-321_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240412-223854-sea.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240423-040041-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-4-20240414-145549-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240413-222633-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240304-091921-124_corrected.jpg
@@ -185,6 +191,7 @@ https://carbform.github.io/assets/images/noaa/NOAA-19-20240320-205539-MCIR-preci
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240302-211107-equidistant_221.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240326-224919-NO.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240224-112133-NO.jpg
+https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240424-041234-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240314-091745-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240321-110013-therm.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240406-210339-221_corrected.jpg
@@ -202,8 +209,10 @@ https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240319-211853-negati
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240320-094457-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240313-105903-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240225-204727-therm.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240423-040041-sea.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240414-094028-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240312-111130-therm.jpg
+https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240424-041234-221_projected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240408-091328-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240405-210054-sea.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240330-104855-MCIR.jpg
@@ -211,6 +220,7 @@ https://carbform.github.io/assets/images/noaa/NOAA-18-20240329-110120-therm.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240319-211853-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240328-222433-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240330-104855-therm.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240422-041259-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240414-211857-321_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240224-094855-sea.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-4-20240303-145435-221_corrected.jpg
@@ -234,6 +244,7 @@ https://carbform.github.io/assets/images/noaa/NOAA-19-20240406-093754-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240318-212001-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240314-091745-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240328-222433-histeq.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240424-050934-sea.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240305-092711-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240405-210054-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240327-211028-therm.jpg
@@ -277,6 +288,7 @@ https://carbform.github.io/assets/images/noaa/NOAA-18-20240328-222433-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240319-223549-sea.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240411-212759-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240406-093754-MCIR.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240423-040041-NO.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240331-091053-sea.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240321-092707-negative224_corrected.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240321-092707-4_corrected.jpg
@@ -286,6 +298,7 @@ https://carbform.github.io/assets/images/noaa/pre-receive.sample
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240320-205539-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240301-212648-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240404-223754-sea.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240423-040041-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240222-225707-sea.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240403-212522-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240317-230043-MCIR.jpg
@@ -313,6 +326,7 @@ https://carbform.github.io/assets/images/noaa/NOAA-18-20240303-223330-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240225-204727-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240405-222533-NO.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240403-225020-sea.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240424-050934-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240224-094855-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240306-211848-124_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240403-225020-MCIR.jpg
@@ -342,6 +356,7 @@ https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240317-091926-124_co
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240419-210339-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240304-093926-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/fsmonitor-watchman.sample
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240424-050934-NO.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240404-211306-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240412-091932-321_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240318-212001-sea.jpg
@@ -358,6 +373,7 @@ https://carbform.github.io/assets/images/noaa/NOAA-18-20240329-110120-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240418-212640-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240224-112133-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240321-110013-sea.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240422-041259-MCIR_projected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240331-091053-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240420-093452-321_projected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240312-111130-sea.jpg
@@ -422,12 +438,14 @@ https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240306-211848-221_co
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240303-094224-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240404-211306-NO.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240311-210332-124_corrected.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240424-050934-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240224-094855-NO.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240317-091926-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240320-111240-therm.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240401-211856-321_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240223-211144-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240407-093451-221_corrected.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240422-041259-MCIR_Rain_projected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240404-211306-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240305-105751-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240312-111130-MCIR-precip.jpg
@@ -448,8 +466,10 @@ https://carbform.github.io/assets/images/noaa/NOAA-18-20240327-223654-sea.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240312-093445-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240303-210219-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240327-223654-histeq.jpg
+https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240424-041234-321_corrected.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240411-094233-221_corrected.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240416-092712-321_projected.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240422-053422-MCIR_Rain_projected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240321-110013-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240222-225707-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240413-222633-sea.jpg
@@ -479,6 +499,7 @@ https://carbform.github.io/assets/images/noaa/pre-rebase.sample
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240327-223654-NO.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240330-091930-321_corrected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240407-104957-therm.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240424-050934-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240305-092711-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240404-211306-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240222-225707-NO.jpg
@@ -486,6 +507,7 @@ https://carbform.github.io/assets/images/noaa/NOAA-18-20240313-105903-NO.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240224-223217-sea.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240227-091213-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240317-230043-sea.jpg
+https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240424-041234-321_projected.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240408-091328-NO.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240403-212522-therm.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240328-111348-histeq.jpg
@@ -496,7 +518,9 @@ https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240410-211117-321_co
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240328-222433-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240412-223854-MCIR.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240406-093754-NO.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-18-20240424-050934-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/METEOR-M2-3-20240323-212638-321_corrected.jpg
+https://carbform.github.io/assets/images/noaa/NOAA-19-20240423-040041-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240413-210330-MCIR-precip.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-19-20240305-092711-histeq.jpg
 https://carbform.github.io/assets/images/noaa/NOAA-18-20240312-111130-MCIR.jpg
