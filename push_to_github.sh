@@ -33,7 +33,7 @@ rm -f "$URL_FILE"
 find "$TARGET_DIR" -type f -exec echo "https://carbform.github.io/{}" \; > "$URL_FILE"
 
 # Uncomment 
-rm -rf "$IMAGE_DIR"/*
+rmdir "$IMAGE_DIR"/*
 
 git add "$TARGET_DIR" "$URL_FILE" "$HTML_FILE"
 git commit -m "Add new images from /srv/images and update HTML"
