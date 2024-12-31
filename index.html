@@ -25,45 +25,51 @@
     <!-- Add this custom CSS -->
     <style>
         @media (max-width: 768px) {
-            .navbar-nav>li>a {
-                color: #333 !important;
-                /* Override default mobile menu text color */
+            .navbar-nav > li > a {
+                color: #333 !important; /* Override default mobile menu text color */
             }
-
-            .navbar-nav>li>a:hover,
-            .navbar-nav>li>a:focus {
-                background-color: #f8f8f8 !important;
-                /* Light grey background on hover/focus */
+    
+            .navbar-nav > li > a:hover,
+            .navbar-nav > li > a:focus {
+                background-color: #f8f8f8 !important; /* Light grey background on hover/focus */
                 color: #333 !important;
             }
-
+    
             .navbar-collapse {
-                background-color: white;
-                /* White background for mobile menu */
+                background-color: white; /* White background for mobile menu */
                 border: none;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             }
-
+    
             .navbar-toggle {
                 border-color: #333;
             }
-
+    
             .navbar-toggle .icon-bar {
                 background-color: #333;
             }
         }
-
+    
         /* Improve touch targets on mobile */
         @media (max-width: 768px) {
-            .navbar-nav>li>a {
+            .navbar-nav > li > a {
                 padding: 15px 20px;
                 font-size: 16px;
             }
-
+    
             .btn {
                 padding: 12px 24px;
                 font-size: 16px;
             }
+        }
+    
+        /* Add vertical separator bars between header texts */
+        .navbar-nav > li {
+            border-left: 1px solid black; /* Change color to black */
+        }
+    
+        .navbar-nav > li:first-child {
+            border-left: none;
         }
     </style>
 </head>
