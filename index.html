@@ -1,122 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <meta content="description" name="description" />
     <meta name="google" content="notranslate" />
-    <meta
-      content="Mashup templates have been developped by Orson.io team"
-      name="Sarat Chandra"
-    />
+    <meta content="Mashup templates have been developped by Orson.io team" name="Sarat Chandra" />
 
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon-16x16.png"
-    />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/site.webmanifest" />
 
     <title>Sarat Chandra</title>
 
     <link href="./main.3f6952e4.css" rel="stylesheet" />
-  </head>
 
-  <body class="minimal">
+    <!-- Add this custom CSS -->
+    <style>
+        @media (max-width: 768px) {
+            .navbar-nav>li>a {
+                color: #333 !important;
+                /* Override default mobile menu text color */
+            }
+
+            .navbar-nav>li>a:hover,
+            .navbar-nav>li>a:focus {
+                background-color: #f8f8f8 !important;
+                /* Light grey background on hover/focus */
+                color: #333 !important;
+            }
+
+            .navbar-collapse {
+                background-color: white;
+                /* White background for mobile menu */
+                border: none;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .navbar-toggle {
+                border-color: #333;
+            }
+
+            .navbar-toggle .icon-bar {
+                background-color: #333;
+            }
+        }
+
+        /* Improve touch targets on mobile */
+        @media (max-width: 768px) {
+            .navbar-nav>li>a {
+                padding: 15px 20px;
+                font-size: 16px;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body class="minimal">
     <div id="site-border-left"></div>
     <div id="site-border-right"></div>
     <div id="site-border-top"></div>
     <div id="site-border-bottom"></div>
-    <!-- Add your content of header -->
+
     <header>
-      <nav class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-          <button
-            type="button"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar-collapse"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-          <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="./index.html" title="">Home</a></li>
-              <li><a href="./about.html" title="">About</a></li>
-              <li><a href="./pmrf.html" title="">Research</a></li>
-              <li><a href="./works.html" title="">Projects</a></li>
-              <li><a href="./downloads.html" title="">Resources</a></li>
-              <li><a href="./music.html" title="">The SkyVerse Music</a></li>
-              <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Add your site or app content here -->
-    <div
-      class="hero-full-container background-image-container white-text-container"
-      style="background-image: url('assets/images/banner.jpeg')"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="hero-full-wrapper">
-              <div class="text-content">
-                <h1 style="font-family: lettera; color: #000000">
-                  <span id="typed-strings">
-                    <span>HELLO</span>
-                    <span> నమస్కారం</span>
-                    <span> नमस्कार</span>
-                  </span>
-                  <span id="typed"></span>
-                </h1>
-                <div>
-                  <br />
-
-                  <a
-                    href="contact.html"
-                    title=""
-                    class="btn badge btn-default"
-                    style="font-family: lettera; font-size: medium"
-                    >Contact</a
-                  >
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./pmrf.html">Research</a></li>
+                        <li><a href="./works.html">Projects</a></li>
+                        <li><a href="./downloads.html">Resources</a></li>
+                        <li>
+                            <a href="./music.html">The SkyVerse Music</a>
+                        </li>
+                        <li>
+                            <a href="https://carbform.medium.com/">Blog</a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
+        </nav>
+    </header>
+
+    <div class="hero-full-container background-image-container white-text-container"
+        style="background-image: url(&quot;assets/images/banner.jpeg&quot;)">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="hero-full-wrapper">
+                        <div class="text-content">
+                            <h1 style="font-family: lettera; color: #000000">
+                                <span id="typed-strings">
+                                    <span>HELLO</span>
+                                    <span> నమస్కారం</span>
+                                    <span> नमस्कार</span>
+                                </span>
+                                <span id="typed"></span>
+                            </h1>
+                            <div>
+                                <br />
+                                <a href="contact.html" class="btn badge btn-default" style="
+                                            font-family: lettera;
+                                            font-size: medium;
+                                        ">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function (event) {
-        type();
-        movingBackgroundImage();
-      });
+        document.addEventListener("DOMContentLoaded", function (event) {
+            type();
+            movingBackgroundImage();
+        });
     </script>
 
     <script type="text/javascript" src="./main.70a66962.js"></script>
-  </body>
+</body>
+
 </html>
