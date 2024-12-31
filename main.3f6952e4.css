@@ -5322,6 +5322,20 @@ textarea {
   margin-right: auto;
   width: 100%;
 }
+.hover-color {
+
+  transition: filter 0.3s ease;
+
+}
+
+
+
+.hover-color:hover {
+
+  filter: grayscale(0%);
+
+}
+
 
 /* CSS to hide scroll bars of the iframe */
 
