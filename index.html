@@ -71,6 +71,22 @@
         .navbar-nav > li:first-child {
             border-left: none;
         }
+
+        @media (max-width: 768px) {
+            .hero-full-wrapper .text-content {
+                background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+                padding: 10px;
+            }
+        }
+
+        /* Remove smooth scrolling */
+        html {
+            scroll-behavior: auto;
+        }
+
+        body {
+            padding-top: 70px; /* Add padding to the top of the body */
+        }
     </style>
 </head>
 
@@ -104,6 +120,15 @@
                         <li>
                             <a href="https://carbform.medium.com/">Blog</a>
                         </li>
+                        <li>
+                            <a href="contact.html" class="btn badge btn-default" style="
+                                font-family: lettera;
+                                font-size: medium;
+                                margin-left: 10px; /* Add spacing */
+                                background-color: red; /* Change background color to red */
+                                color: white; /* Change text color to white */
+                            ">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -121,15 +146,18 @@
                                 <span id="typed-strings">
                                     <span>HELLO</span>
                                     <span> నమస్కారం</span>
-                                    <span> नमस्कार</span>
+                                    <span> नमस्कार </span>
                                 </span>
                                 <span id="typed"></span>
                             </h1>
-                            <div class="btn-center">
+                            <div class="btn-center" style="margin-top: 20px;">
                                 <a href="contact.html" class="btn badge btn-default" style="
-                                            font-family: lettera;
-                                            font-size: medium;
-                                        ">Contact</a>
+                                    font-family: 'Courier New';
+                                    font-size: medium;
+                                    display: none; /* Hide the button in this section */
+                                    background-color: red; /* Change background color to red */
+                                    color: white; /* Change text color to white */
+                                ">Contact</a>
                             </div>
                         </div>
                     </div>
@@ -142,10 +170,10 @@
         document.addEventListener("DOMContentLoaded", function (event) {
             type();
             movingBackgroundImage();
+            // Remove smooth scrolling script for internal links
         });
     </script>
 
     <script type="text/javascript" src="./main.70a66962.js"></script>
 </body>
-
 </html>
