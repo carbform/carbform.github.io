@@ -873,4 +873,9 @@ center iframe {
 
 .dark-theme .card-container h4 {
     color: #ffffff !important;
-} 
+}
+
+/* Ensure specific images do not change colors in dark mode */
+.dark-theme img[src*="new_setup.png"] {
+    filter: none !important;
+}

@@ -110,6 +110,16 @@
       font-family: 'Letter Gothic', monospace;
       color: #0dbd07;
     }
+
+    /* Light mode - invert colors for a white theme effect */
+    .light-theme iframe[src*="spotify"] {
+      filter: invert(1) hue-rotate(180deg);
+    }
+
+    /* Dark mode - use the default black theme */
+    .dark-theme iframe[src*="spotify"] {
+      filter: none;
+    }
   </style>
 </head>
 
