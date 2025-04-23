@@ -1,0 +1,876 @@
+/* Dark theme styles */
+.dark-theme {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Site borders - make them match the theme */
+.dark-theme #site-border-left,
+.dark-theme #site-border-right,
+.dark-theme #site-border-top,
+.dark-theme #site-border-bottom {
+    background-color: #121212 !important;
+}
+
+/* Navbar dark mode colors only */
+.dark-theme .navbar {
+    background-color: #121212 !important;
+    border-color: #333 !important;
+}
+
+.dark-theme .navbar-nav > li > a {
+    color: #ffffff !important;
+}
+
+.dark-theme .navbar-nav > li > a:hover,
+.dark-theme .navbar-nav > li > a:focus {
+    color: #ffffff !important;
+    background-color: #333 !important;
+}
+
+/* Dark mode separators - color only */
+.dark-theme .navbar-nav > li::before {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Theme toggle colors in dark mode */
+.dark-theme .theme-toggle-btn {
+    color: #ffffff !important;
+}
+
+.dark-theme .theme-toggle-btn svg {
+    stroke: #ffffff !important;
+}
+
+/* Keep the contact button red in both modes */
+.navbar-nav > li > a.btn.badge {
+    background-color: red !important;
+    color: white !important;
+}
+
+/* Force dark background on containers */
+.dark-theme .section-container,
+.dark-theme .footer-container,
+.dark-theme .white-text-container,
+.dark-theme .background-image-container,
+.dark-theme .hero-full-container,
+.dark-theme .section-container-spacer,
+.dark-theme .container,
+.dark-theme .container-fluid {
+    background-color: #121212 !important;
+}
+
+/* Text colors */
+.dark-theme h1, 
+.dark-theme h2, 
+.dark-theme h3, 
+.dark-theme h4, 
+.dark-theme h5, 
+.dark-theme h6,
+.dark-theme p,
+.dark-theme span,
+.dark-theme li,
+.dark-theme ul,
+.dark-theme b {
+    color: #ffffff !important;
+}
+
+/* Links in dark mode - using a brighter, more visible blue */
+.dark-theme a {
+    color: #409cff !important; /* Brighter blue for dark mode */
+}
+
+.dark-theme a:hover {
+    color: #66b3ff !important; /* Even lighter blue on hover */
+    text-decoration: underline;
+}
+
+/* Fix list item links and their content */
+.dark-theme .list-inline li a,
+.dark-theme .list-unstyled li a,
+.dark-theme ul li a {
+    color: #409cff !important;
+}
+
+.dark-theme .list-inline li a:hover,
+.dark-theme .list-unstyled li a:hover,
+.dark-theme ul li a:hover {
+    color: #66b3ff !important;
+}
+
+/* Ensure text within links is also properly colored */
+.dark-theme a b,
+.dark-theme a strong,
+.dark-theme a span,
+.dark-theme li a b,
+.dark-theme li a strong,
+.dark-theme li a span {
+    color: #409cff !important;
+}
+
+.dark-theme a:hover b,
+.dark-theme a:hover strong,
+.dark-theme a:hover span,
+.dark-theme li a:hover b,
+.dark-theme li a:hover strong,
+.dark-theme li a:hover span {
+    color: #66b3ff !important;
+}
+
+/* Override any specific link styles */
+.dark-theme [style*="color:"] a,
+.dark-theme [style*="color: "] a,
+.dark-theme [style*="color:"] a b,
+.dark-theme [style*="color: "] a b,
+.dark-theme [style*="color:"] a strong,
+.dark-theme [style*="color: "] a strong {
+    color: #409cff !important;
+}
+
+.dark-theme [style*="color:"] a:hover,
+.dark-theme [style*="color: "] a:hover,
+.dark-theme [style*="color:"] a:hover b,
+.dark-theme [style*="color: "] a:hover b,
+.dark-theme [style*="color:"] a:hover strong,
+.dark-theme [style*="color: "] a:hover strong {
+    color: #66b3ff !important;
+}
+
+/* List items in dark mode */
+.dark-theme .list-inline li,
+.dark-theme .list-unstyled li,
+.dark-theme ul li,
+.dark-theme li {
+    color: #ffffff !important;
+}
+
+/* Mobile menu dark mode */
+@media (max-width: 768px) {
+    .dark-theme .navbar-collapse {
+        background-color: #121212 !important;
+        border-color: #333 !important;
+    }
+    
+    .dark-theme .navbar-nav > li > a {
+        color: #ffffff !important;
+    }
+    
+    .dark-theme .navbar-toggle {
+        border-color: #ffffff !important;
+    }
+    
+    .dark-theme .navbar-toggle .icon-bar {
+        background-color: #ffffff !important;
+    }
+}
+
+/* Background transitions */
+.dark-theme,
+.dark-theme * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fix header spacing and visibility */
+.section-container {
+    padding: 50px 15px 30px 15px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.section-container-spacer {
+    padding-top: 10px !important;
+    margin-bottom: 20px !important;
+}
+
+.section-container-spacer .text-center {
+    margin-bottom: 20px !important;
+}
+
+.section-container-spacer h1 {
+    font-family: dotfont !important;
+    color: #000000 !important;
+    font-size: x-large !important;
+    margin-bottom: 15px !important;
+}
+
+.dark-theme .section-container-spacer h1 {
+    color: #ffffff !important;
+}
+
+.section-container-spacer p b {
+    color: #000000 !important;
+    font-size: medium !important;
+}
+
+.dark-theme .section-container-spacer p b {
+    color: #ffffff !important;
+}
+
+/* Theme toggle container */
+.theme-toggle-container {
+    position: fixed !important;
+    top: 15px !important;
+    right: 25px !important;
+    z-index: 1031 !important;
+}
+
+/* Theme toggle button - switch style */
+.theme-toggle-btn {
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Toggle switch container */
+.toggle-switch {
+    position: relative !important;
+    width: 64px !important;
+    height: 32px !important;
+    background-color: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+    transition: background-color 0.3s ease !important;
+}
+
+/* Slider that moves */
+.toggle-slider {
+    position: absolute !important;
+    left: 4px !important;
+    width: 24px !important;
+    height: 24px !important;
+    background-color: #ffd43b !important;
+    border-radius: 50% !important;
+    transition: transform 0.3s ease !important;
+    z-index: 1 !important;
+}
+
+/* Icons styling */
+.toggle-switch svg {
+    width: 20px !important;
+    height: 20px !important;
+    z-index: 2 !important;
+    position: relative !important;
+}
+
+.sun-icon {
+    stroke: #ff9500 !important;
+    stroke-width: 2.5px !important;
+    margin-left: 2px !important;
+    fill: #ff9500 !important;
+}
+
+.moon-icon {
+    stroke: #6e40c9 !important;
+    stroke-width: 2.5px !important;
+    margin-right: 2px !important;
+}
+
+/* Dark theme modifications */
+.dark-theme .toggle-switch {
+    background-color: #2d2d2d !important;
+}
+
+.dark-theme .toggle-slider {
+    transform: translateX(32px) !important;
+    background-color: #6e40c9 !important;
+}
+
+/* Hover effects */
+.theme-toggle-btn:hover .toggle-switch {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-theme .theme-toggle-btn:hover .toggle-switch {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Theme toggle button size adjustment */
+.theme-toggle-btn {
+    padding: 10px !important;
+    height: 40px !important;
+}
+
+.theme-toggle-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Text colors */
+.dark-theme h1, 
+.dark-theme h2, 
+.dark-theme h3, 
+.dark-theme h4, 
+.dark-theme h5, 
+.dark-theme h6,
+.dark-theme p,
+.dark-theme span,
+.dark-theme li,
+.dark-theme ul,
+.dark-theme b {
+    color: #ffffff !important;
+}
+
+/* Buttons in dark mode */
+.dark-theme .btn {
+    border-color: #333 !important;
+}
+
+.dark-theme .btn-default {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+/* Images in dark mode */
+.dark-theme img {
+    opacity: 0.9;
+}
+
+/* Footer in dark mode */
+.dark-theme .footer-container {
+    background-color: #121212 !important;
+    border-top: 1px solid #333 !important;
+}
+
+.dark-theme .footer-container p {
+    color: #0dbd07 !important; /* Keep the green color in dark mode */
+}
+
+/* Override any white backgrounds */
+.dark-theme [style*="background-color: white"],
+.dark-theme [style*="background-color: #fff"],
+.dark-theme [style*="background-color: #ffffff"],
+.dark-theme [style*="background: white"],
+.dark-theme [style*="background: #fff"],
+.dark-theme [style*="background: #ffffff"] {
+    background-color: #121212 !important;
+}
+
+/* Override any light backgrounds */
+.dark-theme [style*="background-color: #f8f8f8"],
+.dark-theme [style*="background-color: #f5f5f5"],
+.dark-theme [style*="background-color: #eee"],
+.dark-theme [style*="background-color: #eeeeee"] {
+    background-color: #121212 !important;
+}
+
+/* Specific text color overrides */
+.dark-theme [style*="color:#000"],
+.dark-theme [style*="color: #000"],
+.dark-theme [style*="color:black"],
+.dark-theme [style*="color: black"] {
+    color: #ffffff !important;
+}
+
+/* Preserve colored text in dark mode */
+.dark-theme .text-primary,
+.dark-theme .text-success,
+.dark-theme .text-info,
+.dark-theme .text-warning,
+.dark-theme .text-danger {
+    color: inherit !important;
+}
+
+/* Adjust card and section backgrounds */
+.dark-theme .card,
+.dark-theme .section-container {
+    background-color: #1a1a1a;
+    border-color: #333;
+}
+
+/* Adjust table styles */
+.dark-theme table {
+    color: #ffffff;
+}
+
+.dark-theme table thead {
+    background-color: #1a1a1a;
+}
+
+.dark-theme table tbody tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+/* Adjust form elements */
+.dark-theme input,
+.dark-theme textarea,
+.dark-theme select {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #333;
+}
+
+.dark-theme input:focus,
+.dark-theme textarea:focus,
+.dark-theme select:focus {
+    border-color: #666;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+/* Adjust list styles */
+.dark-theme .list-unstyled li,
+.dark-theme .list-inline li {
+    color: #e0e0e0;
+}
+
+/* Adjust footer */
+.dark-theme .footer-container {
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
+
+/* Adjust carousel controls */
+.dark-theme .carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Column spacing adjustments */
+.col-xs-12.col-md-6 {
+    padding: 0 30px !important;
+}
+
+@media (max-width: 768px) {
+    .col-xs-12.col-md-6 {
+        padding: 0 15px !important;
+    }
+}
+
+/* Override any specific list styles */
+.dark-theme [style*="color:#000"] li,
+.dark-theme [style*="color: #000"] li,
+.dark-theme [style*="color:black"] li,
+.dark-theme [style*="color: black"] li,
+.dark-theme ul[style*="color:#000"],
+.dark-theme ul[style*="color: #000"],
+.dark-theme ul[style*="color:black"],
+.dark-theme ul[style*="color: black"] {
+    color: #ffffff !important;
+}
+
+/* Ensure list text is visible in dark mode */
+.dark-theme .list-inline,
+.dark-theme .list-unstyled {
+    color: #ffffff !important;
+}
+
+/* Adjust spacing between elements */
+.row {
+    margin-left: -30px !important;
+    margin-right: -30px !important;
+}
+
+@media (max-width: 768px) {
+    .row {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+}
+
+/* Heading styles with underlines */
+h3[style*="font-family: Lettera"],
+.section-container h3 {
+    border-bottom: 2px solid #333333 !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 15px !important;
+    display: inline-block !important;
+    position: relative !important;
+}
+
+/* Dark mode heading underlines */
+.dark-theme h3[style*="font-family: Lettera"],
+.dark-theme .section-container h3 {
+    border-bottom-color: #666666 !important;
+}
+
+/* Ensure proper spacing after headings */
+h3[style*="font-family: Lettera"] + ul,
+.section-container h3 + ul {
+    margin-top: 15px !important;
+}
+
+/* Research page specific styles */
+.dark-theme .text-center h1[style*="font-family: dotfont"] {
+    color: #ffffff !important;
+}
+
+.dark-theme p[align="justify"],
+.dark-theme p[style*="color:#000000"] {
+    color: #ffffff !important;
+}
+
+/* Style for embedded iframes in dark mode */
+.dark-theme iframe {
+    filter: invert(0.9) hue-rotate(180deg) !important;
+    background-color: #ffffff !important;
+}
+
+/* Flourish embed dark mode */
+.dark-theme .flourish-embed {
+    background-color: #121212 !important;
+    filter: invert(0.9) hue-rotate(180deg) !important;
+}
+
+/* Caption text in dark mode */
+.dark-theme p.para,
+.dark-theme p[style*="font-size: smaller"] {
+    color: #cccccc !important;
+}
+
+/* Ensure links remain visible in dark mode */
+.dark-theme p[align="justify"] a {
+    color: #409cff !important;
+}
+
+.dark-theme p[align="justify"] a:hover {
+    color: #66b3ff !important;
+    text-decoration: underline;
+}
+
+/* Container alignment and spacing */
+.section-container {
+    padding: 50px 15px 30px 15px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* Center and constrain content width */
+.container {
+    max-width: 1200px !important;
+    padding: 0 30px !important;
+    margin: 0 auto !important;
+}
+
+/* Text alignment and spacing */
+p[align="justify"] {
+    margin: 20px 0 !important;
+    line-height: 1.6 !important;
+    max-width: 1140px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Center iframe containers */
+center {
+    display: block !important;
+    max-width: 1200px !important;
+    margin: 30px auto !important;
+    overflow: hidden !important;
+}
+
+/* Flourish embed container */
+.flourish-embed {
+    max-width: 1200px !important;
+    margin: 30px auto !important;
+    overflow: hidden !important;
+}
+
+/* Caption styling */
+p.para, 
+p[style*="font-size: smaller"] {
+    text-align: center !important;
+    max-width: 1140px !important;
+    margin: 15px auto 30px auto !important;
+    color: #666666 !important;
+}
+
+/* Dark theme specific adjustments */
+.dark-theme p.para,
+.dark-theme p[style*="font-size: smaller"] {
+    color: #999999 !important;
+}
+
+/* Row alignment for side-by-side iframes */
+.row {
+    max-width: 1200px !important;
+    margin: 30px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px !important;
+    }
+    
+    .row {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    
+    iframe {
+        width: 100% !important;
+        max-width: 585px !important;
+    }
+}
+
+/* Plot container spacing and alignment */
+.plot-container {
+    clear: both !important;
+}
+
+/* Dark theme specific styles for plots */
+.dark-theme iframe {
+    filter: invert(0.9) hue-rotate(180deg) !important;
+    background-color: #ffffff !important;
+}
+
+/* Flourish embed dark mode */
+.dark-theme .flourish-embed {
+    background-color: #121212 !important;
+    filter: invert(0.9) hue-rotate(180deg) !important;
+}
+
+/* Main plot container */
+center iframe {
+    max-width: 100% !important;
+    height: 800px !important; /* Reverted back to original height */
+}
+
+/* Side by side plots container */
+.side-by-side-plots {
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 30px !important;
+    margin: 40px auto !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    height: 280px !important; /* Reduced height for side-by-side plots */
+}
+
+.side-by-side-plots iframe {
+    flex: 1 !important;
+    max-width: 550px !important;
+    height: 280px !important; /* Reduced height for side-by-side plots */
+    border: none !important;
+    overflow: hidden !important;
+}
+
+/* Ensure iframes maintain aspect ratio */
+iframe {
+    display: block !important;
+    border: none !important;
+}
+
+/* Adjust iframe container for better fit */
+center iframe {
+    max-width: 100% !important;
+    height: 600px !important;
+}
+
+/* Ensure text after plots is properly spaced */
+.plot-container + p[align="justify"],
+.side-by-side-plots + p[align="justify"] {
+    margin-top: 40px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .side-by-side-plots {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .side-by-side-plots iframe {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+/* Works page specific dark mode styles */
+.dark-theme .card-container {
+    background-color: #1e1e1e !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.dark-theme .card-container h3,
+.dark-theme .card-container h4 {
+    color: #ffffff !important;
+    margin-bottom: 15px !important;
+}
+
+.dark-theme .card-container p {
+    color: #ffffff !important;
+    margin-bottom: 20px !important;
+}
+
+.dark-theme .btn-default.btn-white {
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+    margin-top: 10px !important;
+    display: inline-block !important;
+}
+
+.dark-theme .btn-default.btn-white:hover {
+    background-color: #ffffff !important;
+    color: #121212 !important;
+}
+
+.dark-theme .projects-carousel {
+    background-color: #121212 !important;
+}
+
+.dark-theme .img-responsive {
+    border: 1px solid #333 !important;
+}
+
+/* Projects carousel spacing */
+.projects-carousel {
+    margin-top: 10px !important;
+}
+
+/* Ensure proper title visibility in dark mode */
+.dark-theme .section-container-spacer h1[style*="font-family: dotfont"] {
+    color: #ffffff !important;
+}
+
+.dark-theme .section-container-spacer p b {
+    color: #ffffff !important;
+}
+
+.dark-theme .card-container h3 {
+    color: #ffffff !important;
+}
+
+.dark-theme .card-container p {
+    color: #ffffff !important;
+}
+
+.dark-theme .card-container h4 {
+    color: #ffffff !important;
+}
+
+/* Card container adjustments */
+.card-container {
+    min-height: 400px !important;
+    padding: 20px !important;
+    margin-bottom: 15px !important;
+    width: 100% !important;
+}
+
+.card-container h3 {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 15px !important;
+    word-wrap: break-word !important;
+}
+
+.card-container p {
+    margin-bottom: 20px !important;
+    word-wrap: break-word !important;
+}
+
+.card-container .btn {
+    margin-top: auto !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    max-width: 100% !important;
+}
+
+/* Projects carousel adjustments */
+.projects-carousel .col-sm-4 {
+    padding: 15px !important;
+    min-width: 300px !important;
+}
+
+.projects-carousel .img-responsive {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+}
+
+/* Dark theme specific card styles */
+.dark-theme .card-container {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+}
+
+/* Music page specific dark mode styles */
+.dark-theme .text-center h1.large {
+    color: #ffffff !important;
+}
+
+.dark-theme .text-center h1.medium {
+    color: #ffffff !important;
+}
+
+.dark-theme .text-center h1.small {
+    color: #0dbd07 !important;
+}
+
+.dark-theme .text-center h1[style*="color:rgb(0, 60, 255)"] {
+    color: #409cff !important;
+}
+
+.dark-theme .card-container h3[style*="font-family: lettera"] {
+    color: #ffffff !important;
+}
+
+/* Spotify embed dark mode */
+.dark-theme iframe[src*="spotify"] {
+    filter: none !important;
+}
+
+/* Music carousel controls in dark mode */
+.dark-theme .carousel-control {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-theme .carousel-control:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Card container adjustments */
+.card-container {
+    min-height: 400px !important;
+    padding: 20px !important;
+    margin-bottom: 15px !important;
+    width: 100% !important;
+}
+
+/* Music page specific card styles */
+.music-page .card-container {
+    min-height: 100px !important;
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.dark-theme .music-page .card-container {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.music-page .card-container h3,
+.music-page .card-container h4 {
+    margin-bottom: 5px !important;
+}
+
+.dark-theme .card-container h3 {
+    color: #ffffff !important;
+}
+
+.dark-theme .card-container p {
+    color: #ffffff !important;
+}
+
+.dark-theme .card-container h4 {
+    color: #ffffff !important;
+} 

@@ -7,7 +7,7 @@
   <meta content="width=device-width,initial-scale=1" name="viewport">
   <meta content="description" name="description">
   <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developed by Orson.io team" name="author">
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
@@ -18,6 +18,7 @@
   <title>About</title>  
 
   <link href="./main.3f6952e4.css" rel="stylesheet">
+  <link href="./dark-theme.css" rel="stylesheet">
   <style>
     .hover-color {
       filter: grayscale(100%);
@@ -41,42 +42,65 @@
   </style>
 </head>
 
-<body class="">
+<body class="minimal">
 <div id="site-border-left"></div>
 <div id="site-border-right"></div>
 <div id="site-border-top"></div>
 <div id="site-border-bottom"></div>
- <!-- Add your content of header -->
+
+<!-- Theme toggle container -->
+<div class="theme-toggle-container">
+  <button class="theme-toggle-btn" onclick="toggleTheme()">
+    <div class="toggle-switch">
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <div class="toggle-slider"></div>
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </div>
+  </button>
+</div>
+
 <header>
-  <nav class="navbar  navbar-fixed-top navbar-default">
+  <nav class="navbar navbar-fixed-top navbar-default">
     <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
       <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">Home</a></li>
-          <li><a href="./about.html" title="">About</a></li>
-          <li><a href="./pmrf.html" title="">Research</a></li>
-          <li><a href="./works.html" title="">Projects</a></li>
-          <li><a href="./downloads.html" title="">Resources</a></li>
-          <li><a href="./music.html" title="">The SkyVerse Music</a></li>
-          <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
+        <ul class="nav navbar-nav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./pmrf.html">Research</a></li>
+          <li><a href="./works.html">Projects</a></li>
+          <li><a href="./downloads.html">Resources</a></li>
+          <li><a href="./music.html">The SkyVerse Music</a></li>
+          <li><a href="https://carbform.medium.com/">Blog</a></li>
           <li>
             <a href="contact.html" class="btn badge btn-default" style="
               font-family: lettera;
               font-size: medium;
-              margin-left: 10px; /* Add spacing */
-              background-color: red; /* Change background color to red */
-              color: white; /* Change text color to white */
+              margin-left: 10px;
+              background-color: red;
+              color: white;
             ">Contact</a>
           </li>
         </ul>
-      </div> 
+      </div>
     </div>
   </nav>
 </header>
@@ -86,7 +110,7 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="section-container-spacer text-center">
-          <h1 style="font-family: Lettera; color:#000; font-size: x-large;">SARAT CHANDRA</h1>
+          <h1 style="font-family: Lettera; color: #000000; font-size: x-large; margin-top: 30px;">SARAT CHANDRA</h1>
         </div>
         
         <div class="row">
@@ -96,8 +120,8 @@
               My research primarily focuses on the dynamic interactions that govern the regional 
               climate and groundwater systems in India.</b>
             </p>
-            <h3 style="font-family: Lettera; color:#000; font-size:large;">Education</h3>
-            <ul style="font-family: Noto Sans Mono; color:#000; font-size:small;" class="list-inline">
+            <h3 style="font-family: Lettera; color:#000; font-size:20px;">Education</h3>
+            <ul style="font-family: Noto Sans Mono; color:#000; font-size:16px;" class="list-inline">
               <li><b>M.Tech (2017-2019)</b></li>
               <li>Water Resources Engineering</li> 
               <li>National Institute of technology Rourkela IN</li> 
@@ -105,8 +129,8 @@
               <li>Civil Engineering</li> 
               <li>MVGR College of Engineering Vizianagaram IN</li> 
             </ul>
-            <h3 style="font-family: Lettera; color:#000; font-size:large;">Awards and Recognitions</h3>
-            <ul style="font-family: Noto Sans Mono; color:#000; font-size:small;" class="list-unstyled"> 
+            <h3 style="font-family: Lettera; color:#000; font-size:20px;">Awards and Recognitions</h3>
+            <ul style="font-family: Noto Sans Mono; color:#000; font-size:16px;" class="list-unstyled"> 
                 <li><b>Runner up ($10000)</b> of WAVE2WEB Hackathon 2022 with <a href="https://aqrity.com">AQRITY</a></li>
               <li><b>PMRF Scholarship</b> 2020 Indian Institute of Science</li>
               <li><b>Grantham Fellowship</b> 2020 Indian Institute of Science </li>
@@ -114,8 +138,8 @@
               <li><b>Gold Medal</b> for Best Postgraduate of the Department 2019 at the National Institute of Technology Rourkela</li>
               <li><b>Prof. R.C Behara Memorial Award</b> 2019 National Institute of Technology Rourkela</li>
             </ul>
-            <h3 style="font-family: Lettera; color:#000; font-size:large;">Research</h3>
-            <ul style="font-family: Noto Sans Mono; color:#000; font-size:small;" class="list-unstyled"> 
+            <h3 style="font-family: Lettera; color:#000; font-size:20px;">Research</h3>
+            <ul style="font-family: Noto Sans Mono; color:#000; font-size:15px;" class="list-unstyled"> 
               <li><a href="https://link.springer.com/chapter/10.1007/978-3-030-81768-8_19" title=""><b>Depth-Averaged Velocity Distribution in a Meandering 
                 Compound Channel Using Calibrating Coefficients</b></a></li>
               <li>A Handique, A Pradhan, <b>CS Chandra</b>, KK Khatua - River Hydraulics, 2022 - Springer </li>
@@ -130,8 +154,8 @@
 
           <div class="col-xs-12 col-md-6 text-center">
             <img src="./assets/images/times.jpg" class="img-responsive hover-color" alt="">
-            <h3 style="font-family: Lettera; color:#000; font-size:large;">Work Experience</h3>
-            <ul style="font-family: Noto Sans Mono; color:#000; font-size:small;" class="list-unstyled"> 
+            <h3 style="font-family: Lettera; color:#000; font-size:20px;">Work Experience</h3>
+            <ul style="font-family: Noto Sans Mono; color:#000; font-size:15px;" class="list-unstyled"> 
               <li><b>Chegg Inc. (2016-2020)</b></li>
               <li>Subject Matter Expert (Freelance)</li> 
               <li>Visakhapatnam IN</li> 
@@ -139,8 +163,8 @@
               <li>Graduate Engineering Trainee</li> 
               <li>Bengaluru IN</li> 
             </ul>
-            <h3 style="font-family: Lettera; color:#000; font-size:medium;">I generally work with..</h3>
-            <ul style="font-family: Noto Sans; color:#000; font-size:small;" class="list-unstyled"> 
+            <h3 style="font-family: Lettera; color:#000; font-size:18px;">I generally work with..</h3>
+            <ul style="font-family: Noto Sans; color:#000; font-size:16px;" class="list-unstyled"> 
               <li>Python</li>
               <li>HTML/CSS/Javascript</li>
               <li>MATLAB</li>
@@ -162,7 +186,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <p style="font-family:dotfont">© SARAT CHANDRA, 2025 | ALL IMAGES ARE IP | USES NOTHING (R) FONTS</p>
+        <p style="font-family:dotfont; font-size:14px;">© SARAT CHANDRA, 2025 | ALL IMAGES ARE IP | USES NOTHING (R) FONTS</p>
       </div>
     </div>
   </div>
@@ -187,6 +211,7 @@
   ga('send', 'pageview');
 </script>
 
---> <script type="text/javascript" src="./main.70a66962.js"></script></body>
+--> <script type="text/javascript" src="./main.70a66962.js"></script>
+<script type="text/javascript" src="./theme.js"></script></body>
 
 </html>
