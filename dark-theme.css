@@ -879,3 +879,169 @@ center iframe {
 .dark-theme img[src*="new_setup.png"] {
     filter: none !important;
 }
+
+/* Append Photo Quiz Dark Mode Styles */
+.dark-theme .quiz-section {
+  background-color: #2a2a2a !important; 
+  border-color: #444 !important;
+}
+.dark-theme .quiz-question {
+  color: #eee !important;
+}
+.dark-theme .quiz-input {
+  background-color: #3a3a3a !important;
+  color: #fff !important;
+  border-color: #555 !important;
+}
+.dark-theme .quiz-button {
+  background-color: #409cff !important; 
+}
+.dark-theme .quiz-button:hover {
+   background-color: #66b3ff !important;
+}
+.dark-theme .timer-icon {
+   color: #409cff !important; 
+}
+/* End Photo Quiz Dark Mode Styles */
+
+/* Photo Quiz Styles */
+.quiz-section {
+  margin-bottom: 20px; /* Add some space between quiz sections */
+  position: relative; /* Needed for potential absolute positioning inside, if required */
+  overflow: hidden; /* Prevent content like oversized images from spilling out */
+}
+
+.hidden-photo {
+  display: none; /* Initially hide the photo */
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 10px; /* Add some space above the revealed photo */
+  position: relative; /* Ensure it's not behind parent background */
+  z-index: 1; /* Ensure it's not behind parent background */
+}
+
+.hidden-photo.revealed {
+  display: block; /* Show the photo when revealed class is added */
+}
+
+.timer-icon {
+  margin-left: 10px; /* Space out the timer icon */
+  display: none; /* Initially hidden */
+}
+
+.quiz-input,
+.quiz-button {
+  margin-right: 5px; /* Space out input and button */
+}
+
+/* Ensure theme toggle remains visible */
+.theme-toggle-container {
+  position: fixed;
+  top: 70px; /* Adjust as needed */
+  right: 20px;
+  z-index: 1000;
+}
+
+
+/* Ensure photo captions are styled consistently */
+.photo-caption {
+    font-size: 0.8em;
+    color: var(--text-color); /* Use theme variable */
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Specific Dark Mode Adjustments for Quiz Elements if needed */
+body.dark-mode .quiz-question {
+    color: var(--text-color); /* Ensure question text is visible */
+}
+
+body.dark-mode .quiz-input {
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .quiz-button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--button-border-color);
+}
+
+body.dark-mode .quiz-button:disabled {
+    background-color: var(--disabled-bg-color);
+    color: var(--disabled-text-color);
+    border-color: var(--disabled-border-color);
+}
+
+/* Styles for Step-by-Step Quiz */
+.quiz-step {
+    display: none; /* Initially hide all steps - JS will show the active one */
+    width: 100%;
+    max-width: 900px; /* Limit width for better centering */
+    margin: 40px auto; /* Center the step horizontally with some vertical margin */
+    padding: 30px;
+    text-align: center; /* Center content within the step */
+    border: 1px solid var(--border-color, #ccc); /* Optional border */
+    background-color: var(--section-bg-color, #f9f9f9); /* Optional background */
+    border-radius: 8px;
+    overflow: visible !important; /* Explicitly set overflow to visible */
+}
+
+.dark-theme .quiz-step {
+    border-color: var(--dark-border-color, #444);
+    background-color: var(--dark-section-bg-color, #2a2a2a);
+    overflow: visible !important; /* Explicitly set overflow to visible in dark mode too*/
+}
+
+/* Styling for the revealed photo and caption within a step */
+.quiz-step .hidden-photo.revealed {
+    display: block;
+    max-width: 100%; /* Allow image to take full width of container */
+    height: auto;
+    margin: 20px auto 10px auto; /* Center image block and add spacing */
+    border: 1px solid #ccc; /* Optional border around image */
+    position: relative; /* Added */
+    z-index: 1; /* Added */
+}
+
+.quiz-step .photo-caption {
+    display: none; /* Hidden initially by JS */
+    font-size: 1em; /* Make caption slightly larger */
+    color: var(--text-color, #555);
+    margin-bottom: 20px;
+}
+
+.dark-theme .quiz-step .photo-caption {
+    color: var(--dark-text-color, #ccc);
+}
+
+/* Score Container Styling */
+#score-container {
+    display: none; /* Hidden initially by JS */
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid var(--border-color, #ccc);
+    background-color: var(--section-bg-color, #f9f9f9);
+    border-radius: 8px;
+}
+
+.dark-theme #score-container {
+    border-color: var(--dark-border-color, #444);
+    background-color: var(--dark-section-bg-color, #2a2a2a);
+}
+
+/* Ensure score text inherits colors properly */
+#score-container h2,
+#score-container p {
+    color: inherit !important; /* Use color set by theme or JS */
+}
+
+/* Adjust original quiz section styles slightly if needed */
+.quiz-section {
+  margin-bottom: 0; /* Remove bottom margin as .quiz-step now handles spacing */
+  overflow: visible; /* Allow larger images if needed, step controls overflow */
+}

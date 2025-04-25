@@ -23,9 +23,32 @@
 
     <title>Contact</title>
 
+    <!-- Apply theme class immediately -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark-theme'); // Apply to <html> for early access
+        } else {
+          document.documentElement.classList.remove('dark-theme');
+        }
+      })();
+    </script>
+
     <link href="./main.3f6952e4.css" rel="stylesheet" />
     <link href="./dark-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <style>
+      body {
+        padding-top: 70px; /* Add padding for fixed navbar */
+      }
+      .navbar-fixed-top {
+        position: fixed !important; /* Ensure navbar position is fixed */
+        z-index: 1031 !important; /* Ensure navbar stays on top */
+      }
+      /* Leaflet specific overrides - Removed */
       .section-container {
         padding: 40px 0;
       }
@@ -88,17 +111,20 @@
       .address-container a.fa-icon:hover {
         color: #0056b3;
       }
+      .address-container {
+        overflow: hidden;
+      }
       #map {
+        /* position: relative; /* Removed - did not help */
         height: 400px;
         width: 100%;
         margin-top: 20px;
+        /* z-index: 1; /* Removed - did not help */
+      }
+      .leaflet-popup-content {
+        font-size: 14px !important; /* Increase popup font size */
       }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
 
   <body class="">
@@ -179,61 +205,71 @@
                 <ul class="list-unstyled text-center">
                   <li>
                     <span class="fa-icon">
-                      <i class="fa fa-at" aria-hidden="true"></i>
+                      <i class="fa-solid fa-at" aria-hidden="true"></i>
                     </span>
                     <a href="mailto:csarat48@gmail.com">csarat48@gmail.com</a>
                   </li>
                   <li>
                     <span class="fa-icon">
-                      <i class="fa fa-at" aria-hidden="true"></i>
+                      <i class="fa-solid fa-at" aria-hidden="true"></i>
                     </span>
                     <a href="mailto:saratc@iisc.ac.in">saratc@iisc.ac.in</a>
                   </li>
-                  <li>
-                    <span class="fa-icon">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    </span>
-                    <a href="https://goo.gl/maps/hPT6qqUPfTixNeJ58">
-                      ICWaR Indian Institute of Science Bengaluru 560012 IN
-                    </a>
-                  </li>
                 </ul>
-                <div id="map"></div>
                 <h3 class="text-center">Connect with me on</h3>
                 <div class="text-center">
-                  <a
-                    href="https://www.facebook.com/sarat.chandra.77715"
-                    title=""
-                    class="fa-icon"
-                  >
-                    <i class="fa fa-facebook"></i>
-                  </a>
+                  
                   <a href="https://twitter.com/csarat" title="" class="fa-icon">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
                   </a>
-                  <a
-                    href="https://www.linkedin.com/in/sarat-chandra-168649105/"
-                    title=""
-                    class="fa-icon"
-                  >
-                    <i class="fa fa-linkedin"></i>
+                  <a href="https://www.instagram.com/csarat47" title="" class="fa-icon">
+                    <i class="fa-brands fa-instagram"></i>
                   </a>
                   <a href="https://github.com/carbform" title="" class="fa-icon">
-                    <i class="fa fa-github"></i>
+                    <i class="fa-brands fa-github"></i>
                   </a>
+                  
+                </div>
+                <h3 class="text-center">Research</h3>
+                <div class="text-center">
                   <a
                     href="https://scholar.google.com/citations?user=M2saBgYAAAAJ&hl=en"
                     title=""
                     class="fa-icon"
                   >
-                    <i class="fa fa-google"></i>
+                    <i class="fa-brands fa-google"></i>
                   </a>
-                  <a href="https://medium.com/@carbform" title="" class="fa-icon">
-                    <i class="fa fa-medium"></i>
+                  <a 
+                    href="https://www.researchgate.net/profile/C-Sarat-Chandra?ev=hdr_xprf" 
+                    title="" 
+                    class="fa-icon"
+                  >
+                     <i class="fa-brands fa-researchgate"></i>
                   </a>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- Map div moved here -->
+        <!-- Address moved here -->
+        <div class="row">
+          <div class="col-xs-12 text-center" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+               <li>
+                 <span class="fa-icon">
+                   <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                 </span>
+                 <a href="https://goo.gl/maps/hPT6qqUPfTixNeJ58" style="font-size: 14px;">
+                   ICWaR Indian Institute of Science Bengaluru 560012 IN
+                 </a>
+               </li>
+             </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div id="map"></div>
           </div>
         </div>
       </div>
@@ -250,16 +286,34 @@
     </footer>
 
     <script>
+      var map = null; // Make map variable global
+      var tileLayer = null; // Global reference for tile layer
+
+      // Define Tile Layer URLs HERE, before DOMContentLoaded
+      const lightTileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      const lightAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+      const darkTileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+      const darkAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+      
       document.addEventListener("DOMContentLoaded", function (event) {
         navActivePage();
-
+        
+        // Apply theme class to body as well (might be needed for some CSS selectors)
+        if (document.documentElement.classList.contains('dark-theme')) {
+          document.body.classList.add('dark-theme');
+        }
+        
         // Initialize the map
-        var map = L.map("map").setView([13.0214, 77.567], 15); // Coordinates for ICWaR, IISc
+        map = L.map("map").setView([13.0214, 77.567], 15); // Assign to global map variable
 
-        // Add OpenStreetMap tiles
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        // Determine initial theme - NOW READS FROMdocumentElement
+        const isDark = document.documentElement.classList.contains('dark-theme');
+        const initialTileUrl = isDark ? darkTileUrl : lightTileUrl;
+        const initialAttribution = isDark ? darkAttribution : lightAttribution;
+
+        // Add initial OpenStreetMap tiles
+        tileLayer = L.tileLayer(initialTileUrl, {
+          attribution: initialAttribution
         }).addTo(map);
 
         // Add a marker for ICWaR
@@ -267,6 +321,7 @@
           .addTo(map)
           .bindPopup("Indian Institute of Science, Bengaluru")
           .openPopup();
+        
       });
     </script>
 

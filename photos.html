@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+    <meta name="google" content="notranslate" />
+    <meta
+      content="Mashup templates have been developed by Orson.io team"
+      name="author"
+    />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-icon-180x180.png"
+    />
+    <link href="./assets/favicon.ico" rel="icon" />
+
+    <title>Photos</title>
+
+    <link href="./main.3f6952e4.css" rel="stylesheet" />
+    <link href="./dark-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+
+  <body class="">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+    <script type="text/javascript" src="./theme-toggle.js"></script>
+    <!-- Theme toggle container -->
+    <div class="theme-toggle-container">
+      <button class="theme-toggle-btn" onclick="toggleTheme()">
+        <div class="toggle-switch">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <div class="toggle-slider"></div>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </div>
+      </button>
+    </div>
+    <!-- Add your content of header -->
+    <header>
+      <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="./index.html" title="">Home</a></li>
+              <li><a href="./about.html" title="">About</a></li>
+              <li><a href="./pmrf.html" title="">Research</a></li>
+              <li><a href="./works.html" title="">Projects</a></li>
+              <li><a href="./downloads.html" title="">Resources</a></li>
+              <li><a href="./music.html" title="">The SkyVerse Music</a></li>
+              <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
+              <!-- Placeholder for camera icon link -->
+              <li><a href="./photos.html" title="Photos"><i class="fa-solid fa-camera"></i></a></li> 
+              <li>
+                <a href="contact.html" class="btn badge btn-default" style="
+                  font-family: lettera;
+                  font-size: medium;
+                  margin-left: 10px; /* Add spacing */
+                  background-color: red; /* Change background color to red */
+                  color: white; /* Change text color to white */
+                ">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="section-container-spacer text-center">
+              <h1 style="font-family: dotfont; color:#000; font-size: large;">
+                Photos
+              </h1>
+            </div>
+            <div class="photo-gallery">
+              <!-- Quiz Step 1 -->
+              <div class="quiz-step">
+                  <div class="quiz-section">
+                    <p class="quiz-question">Which satellite captured image 1 (NOAA-15 or NOAA-19)?</p>
+                    <input type="text" class="quiz-input" id="answer1" placeholder="Enter answer...">
+                    <button class="quiz-button" onclick="checkAnswer('answer1', 'NOAA-19', 'photo1', 'timer1', 'caption1')">Submit</button>
+                    <span class="timer-icon fa-solid fa-spinner" id="timer1"></span> <!-- Timer Icon -->
+                  </div>
+                  <img src="pxl/NOAA-19-20240301-212648-histeq.jpg" alt="NOAA 19 Image 1" class="hidden-photo" id="photo1">
+                  <p class="photo-caption" id="caption1">NOAA-19-20240301-212648-histeq.jpg</p>
+              </div>
+
+              <!-- Quiz Step 2 -->
+              <div class="quiz-step">
+                  <div class="quiz-section">
+                    <p class="quiz-question">What is the date for image 2 (YYYYMMDD)?</p>
+                    <input type="text" class="quiz-input" id="answer2" placeholder="Enter answer...">
+                    <button class="quiz-button" onclick="checkAnswer('answer2', '20240301', 'photo2', 'timer2', 'caption2')">Submit</button>
+                    <span class="timer-icon fa-solid fa-spinner" id="timer2"></span> <!-- Timer Icon -->
+                    <img src="pxl/NOAA-19-20240301-212648-MCIR-precip.jpg" alt="NOAA 19 Image 2" class="hidden-photo" id="photo2">
+                    <p class="photo-caption" id="caption2">NOAA-19-20240301-212648-MCIR-precip.jpg</p>
+                  </div>
+              </div>
+
+              <!-- Quiz Step 3 -->
+              <div class="quiz-step">
+                  <div class="quiz-section">
+                    <p class="quiz-question">Which satellite captured image 3 (NOAA-15 or NOAA-19)?</p>
+                    <input type="text" class="quiz-input" id="answer3" placeholder="Enter answer...">
+                    <button class="quiz-button" onclick="checkAnswer('answer3', 'NOAA-15', 'photo3', 'timer3', 'caption3')">Submit</button>
+                    <span class="timer-icon fa-solid fa-spinner" id="timer3"></span> <!-- Timer Icon -->
+                    <img src="pxl/NOAA-15-20240227-074419-MCIR-precip.jpg" alt="NOAA 15 Image 1" class="hidden-photo" id="photo3">
+                    <p class="photo-caption" id="caption3">NOAA-15-20240227-074419-MCIR-precip.jpg</p>
+                  </div>
+              </div>
+
+              <!-- Quiz Step 4 -->
+              <div class="quiz-step">
+                  <div class="quiz-section">
+                    <p class="quiz-question">What is the date for image 4 (YYYYMMDD)?</p>
+                    <input type="text" class="quiz-input" id="answer4" placeholder="Enter answer...">
+                    <button class="quiz-button" onclick="checkAnswer('answer4', '20240227', 'photo4', 'timer4', 'caption4')">Submit</button>
+                    <span class="timer-icon fa-solid fa-spinner" id="timer4"></span> <!-- Timer Icon -->
+                    <img src="pxl/NOAA-15-20240227-074419-histeq.jpg" alt="NOAA 15 Image 2" class="hidden-photo" id="photo4">
+                    <p class="photo-caption" id="caption4">NOAA-15-20240227-074419-histeq.jpg</p>
+                  </div>
+              </div>
+              
+              <!-- Score Container -->
+              <div id="score-container" style="display: none;"></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-container text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p style="font-family:dotfont">© SARAT CHANDRA, 2025 | ALL IMAGES ARE IP | USES NOTHING (R) FONTS</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+      });
+    </script>
+
+    <script type="text/javascript" src="./main.70a66962.js"></script>
+    <script type="text/javascript" src="./photo-quiz.js"></script> <!-- Link the new JS file -->
+  </body>
+</html> 

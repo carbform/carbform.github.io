@@ -5343,3 +5343,89 @@ textarea {
 
 
 /*# sourceMappingURL=main.70a66962.map*/
+
+/* Append Photo Quiz Styles */
+.photo-gallery {
+  padding: 20px 0; 
+}
+.quiz-section {
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left; 
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.quiz-question {
+  font-family: 'Noto Sans Mono', monospace; 
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.quiz-input {
+  width: calc(100% - 90px); 
+  padding: 8px;
+  margin-right: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  display: inline-block; 
+}
+.quiz-button {
+  padding: 8px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #007bff; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  vertical-align: top; 
+}
+.quiz-button:hover {
+  background-color: #0056b3;
+}
+.hidden-photo {
+  max-height: 0; 
+  overflow: hidden; 
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 5px;
+  transition: max-height 0.6s ease-out, opacity 0.6s ease-out, transform 0.6s ease-out; 
+  opacity: 0;
+  transform: translateY(20px); 
+}
+.hidden-photo.revealed {
+  max-height: 1000px; 
+  opacity: 1;
+  transform: translateY(0); 
+}
+.photo-caption {
+  display: none; 
+  font-size: 13px;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  margin-top: 5px;
+}
+.hidden-photo.revealed + .photo-caption {
+  display: block;
+}
+.hover-color {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.hover-color:hover {
+  filter: grayscale(0%);
+}
+.timer-icon {
+   display: none; 
+   position: absolute;
+   top: 10px; 
+   right: 10px;
+   font-size: 24px;
+   color: #007bff; 
+}
+/* End Photo Quiz Styles */
