@@ -1,5 +1,6 @@
 /* Dark theme styles */
-.dark-theme {
+html.dark-theme, /* Target html element as well */
+.dark-theme { /* Keep body target for compatibility */
     background-color: #121212 !important;
     color: #ffffff !important;
 }
@@ -71,7 +72,12 @@
 .dark-theme span,
 .dark-theme li,
 .dark-theme ul,
-.dark-theme b {
+.dark-theme b,
+.dark-theme strong,
+.dark-theme div, /* Target generic divs too */
+.dark-theme td, /* Target table cells */
+.dark-theme th /* Target table headers */
+{
     color: #ffffff !important;
 }
 
@@ -145,7 +151,7 @@
 }
 
 /* Mobile menu dark mode */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Corrected media query syntax if needed, ensure it's 768px */
     .dark-theme .navbar-collapse {
         background-color: #121212 !important;
         border-color: #333 !important;
@@ -155,12 +161,18 @@
         color: #ffffff !important;
     }
     
+    /* Style the toggle button itself */
     .dark-theme .navbar-toggle {
-        border-color: #ffffff !important;
+        border-color: #666 !important; /* Make border visible */
+    }
+    .dark-theme .navbar-toggle:hover,
+    .dark-theme .navbar-toggle:focus {
+         background-color: #333 !important; /* Darker background on hover/focus */
     }
     
+    /* Style the icon bars inside the toggle */
     .dark-theme .navbar-toggle .icon-bar {
-        background-color: #ffffff !important;
+        background-color: #ffffff !important; /* Make icon bars white */
     }
 }
 
@@ -365,8 +377,20 @@
 .dark-theme [style*="color:#000"],
 .dark-theme [style*="color: #000"],
 .dark-theme [style*="color:black"],
-.dark-theme [style*="color: black"] {
+.dark-theme [style*="color: black"],
+.dark-theme [style*="color: #000000"] /* Add hex */
+{
     color: #ffffff !important;
+}
+
+/* Ensure elements within those with inline styles also inherit */
+.dark-theme [style*="color:#000"] *,
+.dark-theme [style*="color: #000"] *,
+.dark-theme [style*="color:black"] *,
+.dark-theme [style*="color: black"] *,
+.dark-theme [style*="color: #000000"] *
+{
+    color: inherit !important; /* Inherit the forced white color */
 }
 
 /* Preserve colored text in dark mode */
@@ -480,16 +504,18 @@
 /* Heading styles with underlines */
 h3[style*="font-family: Lettera"],
 .section-container h3 {
-    border-bottom: 2px solid #333333 !important;
+    border-bottom: 2px solid #cccccc !important; /* Lighter border for light mode */
     padding-bottom: 8px !important;
     margin-bottom: 15px !important;
     display: inline-block !important;
     position: relative !important;
+    color: #000000 !important; /* Explicitly set light mode color */
 }
 
-/* Dark mode heading underlines */
+/* Dark mode heading underlines and color */
 .dark-theme h3[style*="font-family: Lettera"],
 .dark-theme .section-container h3 {
+    color: #ffffff !important; /* Ensure white color in dark mode */
     border-bottom-color: #666666 !important;
 }
 

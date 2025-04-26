@@ -22,7 +22,10 @@ function updateIcon(isDark) {
 }
 
 function toggleTheme() {
-    const isDark = document.documentElement.classList.toggle('dark-theme');
+    const htmlElement = document.documentElement;
+    const body = document.body;
+    const isDark = htmlElement.classList.toggle('dark-theme');
+    body.classList.toggle('dark-theme', isDark); // Ensure body class matches html
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
     // Update Leaflet Tile Layer if a map and tileLayer exist
@@ -53,12 +56,11 @@ function toggleTheme() {
         }
     }
 
-    // CSS handles icon switching now, no JS needed for that part
+    // Update icon based on the new theme state
+    updateIcon(isDark); // Moved updateIcon call here
 }
 
 // Apply the saved theme on page load listener
-// This logic is now handled by an inline script in the <head> of HTML pages.
-// Re-adding listener for robustness across all pages, including those potentially without the inline script.
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     const htmlElement = document.documentElement;
@@ -72,13 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
         isDark = true;
     }
 
-    if (isDark) {
-        htmlElement.classList.add('dark-theme');
-        body.classList.add('dark-theme');
-    } else {
-        htmlElement.classList.remove('dark-theme');
-        body.classList.remove('dark-theme');
-    }
+    // Apply class to both html and body
+    htmlElement.classList.toggle('dark-theme', isDark);
+    body.classList.toggle('dark-theme', isDark);
+
     // Update icon based on the determined theme
     updateIcon(isDark); 
 });
@@ -90,13 +89,11 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     if (!localStorage.getItem('theme')) {
         const htmlElement = document.documentElement;
         const body = document.body;
-        if (isSystemDark) {
-            htmlElement.classList.add('dark-theme');
-            body.classList.add('dark-theme');
-        } else {
-            htmlElement.classList.remove('dark-theme');
-            body.classList.remove('dark-theme');
-        }
+        
+        // Apply class to both html and body
+        htmlElement.classList.toggle('dark-theme', isSystemDark);
+        body.classList.toggle('dark-theme', isSystemDark);
+
         updateIcon(isSystemDark);
     }
 });
