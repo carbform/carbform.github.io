@@ -1797,7 +1797,7 @@ table th[class*="col-"] {
 .table > tfoot > tr > td.danger,
 .table > tfoot > tr > th.danger,
 .table > thead > tr.danger > td,
-.table > thead > tr.danger > th,
+.table > thead > tr > th.danger,
 .table > thead > tr > td.danger,
 .table > thead > tr > th.danger {
   background-color: red;
@@ -5429,3 +5429,27 @@ textarea {
    color: #007bff; 
 }
 /* End Photo Quiz Styles */
+
+/* Easter egg for photos link */
+.photo-link-easter-egg a i {
+  color: #777; /* Default icon color, adjust as needed */
+  transition: color 0.3s ease;
+}
+
+/* Style for Font Awesome 6 Solid icons */
+.photo-link-easter-egg a i::before {
+  display: inline-block; /* Ensure the pseudo-element is displayed */
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free"; /* Make sure this matches the FA version used */
+  font-weight: 900; /* Use 900 for solid icons */
+  content: "\f03e"; /* Unicode for fa-image */
+  transition: content 0.3s ease, color 0.3s ease; /* Smooth transition for icon and color */
+}
+
+.photo-link-easter-egg a:hover i::before {
+  content: "\f083"; /* Unicode for fa-camera-retro */
+  color: #0674ea; /* Blue color on hover */
+}
