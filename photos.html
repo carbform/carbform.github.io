@@ -26,6 +26,70 @@
     <link href="./main.3f6952e4.css" rel="stylesheet" />
     <link href="./dark-theme.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Add Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+    <style>
+      /* Optional: Add some spacing between thumbnails */
+      .photo-thumbnail {
+        margin-bottom: 15px;
+        display: block; /* Ensure links behave like blocks */
+        position: relative; /* Needed for absolute positioning of image if used later */
+        min-height: 100px; /* Give the container some height even when image is hidden */
+        overflow: hidden; /* Prevent game target from spilling out */
+      }
+      .photo-thumbnail img {
+         width: 100%; /* Make images responsive within their columns */
+         height: auto;
+         border: 1px solid #ddd; /* Optional: add a light border */
+         padding: 3px;
+         /* Initially hide images and add transition */
+         opacity: 0;
+         transition: opacity 0.3s ease-in-out;
+         position: absolute; /* Take image out of flow for better control */
+         top: 0;
+         left: 0;
+         pointer-events: none; /* Don't interfere with game target clicks */
+         transition: opacity 0.5s ease-in-out;
+      }
+      .photo-thumbnail img.visible {
+          opacity: 1;
+          position: relative; /* Put visible image back into flow */
+          pointer-events: auto;
+      }
+      /* Ensure lightbox captions are readable in both themes */
+      .lb-data .lb-caption {
+        color: #eee; /* Light color for dark background */
+      }
+      .light-theme .lb-data .lb-caption {
+         color: #333; /* Dark color for light background */
+      }
+      .light-theme .lb-dataContainer {
+          background-color: rgba(255, 255, 255, 0.9); /* Light background for caption area in light theme */
+      }
+      .dark-theme .lb-dataContainer {
+          background-color: rgba(0, 0, 0, 0.8); /* Dark background for caption area in dark theme */
+      }
+      /* Game Target Styles */
+      .game-target {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        transition: background-color 0.2s;
+        z-index: 10; /* Ensure it's above the hidden image */
+      }
+      .game-target:hover {
+        background-color: darkred;
+      }
+
+      /* Style for unlocked state (optional) */
+       .photo-thumbnail.unlocked .game-target {
+           display: none; /* Hide target once unlocked */
+       }
+    </style>
   </head>
 
   <body class="">
@@ -83,7 +147,7 @@
               <li><a href="./music.html" title="">The SkyVerse Music</a></li>
               <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
               <!-- Placeholder for camera icon link -->
-              <li><a href="./photos.html"><i class="fa-solid fa-camera-retro" style="color: #0674ea;"></i></a></li> 
+              <li class="photo-link-easter-egg"><a href="./photos.html"><i class="fa-solid"></i></a></li> <!-- Added class, removed specific icon -->
               <li>
                 <a href="contact.html" class="btn badge btn-default" style="
                   font-family: lettera;
@@ -108,59 +172,36 @@
                 Photos
               </h1>
             </div>
-            <div class="photo-gallery">
-              <!-- Quiz Step 1 -->
-              <div class="quiz-step">
-                  <div class="quiz-section">
-                    <p class="quiz-question">Which satellite captured image 1 (NOAA-15 or NOAA-19)?</p>
-                    <input type="text" class="quiz-input" id="answer1" placeholder="Enter answer...">
-                    <button class="quiz-button" onclick="checkAnswer('answer1', 'NOAA-19', 'photo1', 'timer1', 'caption1')">Submit</button>
-                    <span class="timer-icon fa-solid fa-spinner" id="timer1"></span> <!-- Timer Icon -->
-                  </div>
-                  <img src="pxl/NOAA-19-20240301-212648-histeq.jpg" alt="NOAA 19 Image 1" class="hidden-photo" id="photo1">
-                  <p class="photo-caption" id="caption1">NOAA-19-20240301-212648-histeq.jpg</p>
-              </div>
 
-              <!-- Quiz Step 2 -->
-              <div class="quiz-step">
-                  <div class="quiz-section">
-                    <p class="quiz-question">What is the date for image 2 (YYYYMMDD)?</p>
-                    <input type="text" class="quiz-input" id="answer2" placeholder="Enter answer...">
-                    <button class="quiz-button" onclick="checkAnswer('answer2', '20240301', 'photo2', 'timer2', 'caption2')">Submit</button>
-                    <span class="timer-icon fa-solid fa-spinner" id="timer2"></span> <!-- Timer Icon -->
-                    <img src="pxl/NOAA-19-20240301-212648-MCIR-precip.jpg" alt="NOAA 19 Image 2" class="hidden-photo" id="photo2">
-                    <p class="photo-caption" id="caption2">NOAA-19-20240301-212648-MCIR-precip.jpg</p>
-                  </div>
+            <!-- Lightbox Gallery Grid -->
+            <div class="row" id="photo-gallery-container">
+              <div class="col-md-6 col-sm-6">
+                <a href="pxl/NOAA-19-20240301-212648-histeq.jpg" data-lightbox="gallery" data-title="NOAA-19-20240301-212648-histeq.jpg" class="photo-thumbnail">
+                  <div class="game-target"></div>
+                  <img src="pxl/NOAA-19-20240301-212648-histeq.jpg" alt="NOAA 19 Image 1">
+                </a>
               </div>
-
-              <!-- Quiz Step 3 -->
-              <div class="quiz-step">
-                  <div class="quiz-section">
-                    <p class="quiz-question">Which satellite captured image 3 (NOAA-15 or NOAA-19)?</p>
-                    <input type="text" class="quiz-input" id="answer3" placeholder="Enter answer...">
-                    <button class="quiz-button" onclick="checkAnswer('answer3', 'NOAA-15', 'photo3', 'timer3', 'caption3')">Submit</button>
-                    <span class="timer-icon fa-solid fa-spinner" id="timer3"></span> <!-- Timer Icon -->
-                    <img src="pxl/NOAA-15-20240227-074419-MCIR-precip.jpg" alt="NOAA 15 Image 1" class="hidden-photo" id="photo3">
-                    <p class="photo-caption" id="caption3">NOAA-15-20240227-074419-MCIR-precip.jpg</p>
-                  </div>
+              <div class="col-md-6 col-sm-6">
+                <a href="pxl/NOAA-19-20240301-212648-MCIR-precip.jpg" data-lightbox="gallery" data-title="NOAA-19-20240301-212648-MCIR-precip.jpg" class="photo-thumbnail">
+                   <div class="game-target"></div>
+                  <img src="pxl/NOAA-19-20240301-212648-MCIR-precip.jpg" alt="NOAA 19 Image 2">
+                </a>
               </div>
-
-              <!-- Quiz Step 4 -->
-              <div class="quiz-step">
-                  <div class="quiz-section">
-                    <p class="quiz-question">What is the date for image 4 (YYYYMMDD)?</p>
-                    <input type="text" class="quiz-input" id="answer4" placeholder="Enter answer...">
-                    <button class="quiz-button" onclick="checkAnswer('answer4', '20240227', 'photo4', 'timer4', 'caption4')">Submit</button>
-                    <span class="timer-icon fa-solid fa-spinner" id="timer4"></span> <!-- Timer Icon -->
-                    <img src="pxl/NOAA-15-20240227-074419-histeq.jpg" alt="NOAA 15 Image 2" class="hidden-photo" id="photo4">
-                    <p class="photo-caption" id="caption4">NOAA-15-20240227-074419-histeq.jpg</p>
-                  </div>
+              <div class="col-md-6 col-sm-6">
+                <a href="pxl/NOAA-15-20240227-074419-MCIR-precip.jpg" data-lightbox="gallery" data-title="NOAA-15-20240227-074419-MCIR-precip.jpg" class="photo-thumbnail">
+                   <div class="game-target"></div>
+                  <img src="pxl/NOAA-15-20240227-074419-MCIR-precip.jpg" alt="NOAA 15 Image 1">
+                </a>
               </div>
-              
-              <!-- Score Container -->
-              <div id="score-container" style="display: none;"></div>
-
+              <div class="col-md-6 col-sm-6">
+                <a href="pxl/NOAA-15-20240227-074419-histeq.jpg" data-lightbox="gallery" data-title="NOAA-15-20240227-074419-histeq.jpg" class="photo-thumbnail">
+                   <div class="game-target"></div>
+                  <img src="pxl/NOAA-15-20240227-074419-histeq.jpg" alt="NOAA 15 Image 2">
+                </a>
+              </div>
             </div>
+            <!-- End Lightbox Gallery Grid -->
+
           </div>
         </div>
       </div>
@@ -183,6 +224,114 @@
     </script>
 
     <script type="text/javascript" src="./main.70a66962.js"></script>
-    <script type="text/javascript" src="./photo-quiz.js"></script> <!-- Link the new JS file -->
+    <!-- Explicitly load jQuery before Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Add Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const thumbnails = document.querySelectorAll('.photo-thumbnail');
+        const gameTargetDuration = 1000; // Target visible for 1 second
+
+        thumbnails.forEach(thumbnail => {
+          const target = thumbnail.querySelector('.game-target');
+          const img = thumbnail.querySelector('img');
+          let gameTimer = null;
+
+          // Function to show the target
+          const showTarget = () => {
+            if (thumbnail.classList.contains('unlocked')) return; // Don't show if already won
+
+            const thumbRect = thumbnail.getBoundingClientRect();
+            const targetSize = 30;
+            // Calculate random position within the thumbnail bounds
+            const maxX = thumbRect.width - targetSize;
+            const maxY = thumbRect.height - targetSize;
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            target.style.left = `${randomX}px`;
+            target.style.top = `${randomY}px`;
+            target.style.display = 'block';
+
+            // Set timer to hide the target
+            clearTimeout(gameTimer); // Clear previous timer if any
+            gameTimer = setTimeout(() => {
+              target.style.display = 'none';
+            }, gameTargetDuration);
+          };
+
+          // Function to handle winning the game
+          const winGame = () => {
+            clearTimeout(gameTimer);
+            target.style.display = 'none';
+            img.classList.add('visible');
+            thumbnail.classList.add('unlocked');
+            // Ensure parent resizes correctly
+            thumbnail.style.minHeight = 'auto';
+            // Remove event listeners for this specific target after winning
+            target.removeEventListener('click', winGame);
+            thumbnail.removeEventListener('mouseenter', showTarget);
+            thumbnail.removeEventListener('mouseleave', hideTarget);
+          };
+
+           // Function to hide target immediately (e.g., on mouseleave)
+           const hideTarget = () => {
+               clearTimeout(gameTimer);
+               if (!thumbnail.classList.contains('unlocked')) {
+                   target.style.display = 'none';
+               }
+           };
+
+          // Add event listeners
+          thumbnail.addEventListener('mouseenter', showTarget);
+          thumbnail.addEventListener('mouseleave', hideTarget);
+          target.addEventListener('click', winGame);
+
+          // Initial setup for min-height (important for layout before interaction)
+          if (img) {
+              const tempImg = new Image();
+              tempImg.onload = () => {
+                  const aspectRatio = tempImg.naturalHeight / tempImg.naturalWidth;
+                  const currentWidth = thumbnail.offsetWidth;
+                  // Set min-height only if not already unlocked (e.g. on page load)
+                  if (!thumbnail.classList.contains('unlocked')) {
+                      thumbnail.style.minHeight = aspectRatio ? `${currentWidth * aspectRatio}px` : '150px';
+                  }
+              }
+              tempImg.onerror = () => {
+                   if (!thumbnail.classList.contains('unlocked')) {
+                       thumbnail.style.minHeight = '150px'; // Default on error
+                   }
+              }
+              tempImg.src = img.src;
+          } else {
+               if (!thumbnail.classList.contains('unlocked')) {
+                  thumbnail.style.minHeight = '150px';
+               }
+          }
+        });
+
+        // Adjust min-height on resize for thumbnails that are still locked
+        window.addEventListener('resize', () => {
+            thumbnails.forEach(thumbnail => {
+                if (!thumbnail.classList.contains('unlocked')) {
+                    const img = thumbnail.querySelector('img');
+                    if (img && img.naturalWidth) { // Check if image properties are available
+                         const aspectRatio = img.naturalHeight / img.naturalWidth;
+                         const currentWidth = thumbnail.offsetWidth;
+                         thumbnail.style.minHeight = aspectRatio ? `${currentWidth * aspectRatio}px` : '150px';
+                    } else {
+                         thumbnail.style.minHeight = '150px'; // Fallback
+                    }
+                } else {
+                    thumbnail.style.minHeight = 'auto'; // Ensure unlocked ones fit content
+                }
+            });
+        });
+
+      });
+    </script>
   </body>
 </html>
