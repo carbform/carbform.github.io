@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+    <meta name="google" content="notranslate" />
+    <meta
+      content="Mashup templates have been developed by Orson.io team"
+      name="author"
+    />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-icon-180x180.png"
+    />
+    <link href="./assets/favicon.ico" rel="icon" />
+
+    <title>Photos</title>
+
+    <link href="./main.3f6952e4.css" rel="stylesheet" />
+    <link href="./dark-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Add Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+    <style>
+      /* Optional: Add some spacing between thumbnails */
+      .photo-thumbnail {
+        margin-bottom: 15px;
+        display: block; /* Ensure links behave like blocks */
+        position: relative; /* Needed for absolute positioning of image if used later */
+        min-height: 100px; /* Give the container some height even when image is hidden */
+        overflow: hidden; /* Prevent game target from spilling out */
+      }
+      .photo-thumbnail img {
+         width: 100%; /* Make images responsive within their columns */
+         height: auto;
+         border: 1px solid #ddd; /* Optional: add a light border */
+         padding: 3px;
+         /* Initially hide images and add transition */
+         opacity: 0;
+         transition: opacity 0.3s ease-in-out;
+         position: absolute; /* Take image out of flow for better control */
+         top: 0;
+         left: 0;
+         pointer-events: none; /* Don't interfere with game target clicks */
+         transition: opacity 0.5s ease-in-out;
+      }
+      .photo-thumbnail img.visible {
+          opacity: 1;
+          position: relative; /* Put visible image back into flow */
+          pointer-events: auto;
+      }
+      /* Ensure lightbox captions are readable in both themes */
+      .lb-data .lb-caption {
+        color: #eee; /* Light color for dark background */
+      }
+      .light-theme .lb-data .lb-caption {
+         color: #333; /* Dark color for light background */
+      }
+      .light-theme .lb-dataContainer {
+          background-color: rgba(255, 255, 255, 0.9); /* Light background for caption area in light theme */
+      }
+      .dark-theme .lb-dataContainer {
+          background-color: rgba(0, 0, 0, 0.8); /* Dark background for caption area in dark theme */
+      }
+      /* Game Target Styles */
+      .game-target {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        transition: background-color 0.2s;
+        z-index: 10; /* Ensure it's above the hidden image */
+      }
+      .game-target:hover {
+        background-color: darkred;
+      }
+
+      /* Style for unlocked state (optional) */
+       .photo-thumbnail.unlocked .game-target {
+           display: none; /* Hide target once unlocked */
+       }
+    </style>
+  </head>
+
+  <body class="">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+    <script type="text/javascript" src="./theme-toggle.js"></script>
+    <!-- Theme toggle container -->
+    <div class="theme-toggle-container">
+      <button class="theme-toggle-btn" onclick="toggleTheme()">
+        <div class="toggle-switch">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <div class="toggle-slider"></div>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 A7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </div>
+      </button>
+    </div>
+    <!-- Add your content of header -->
+    <header>
+      <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="./index.html" title="">Home</a></li>
+              <li><a href="./about.html" title="">About</a></li>
+              <li><a href="./pmrf.html" title="">Research</a></li>
+              <li><a href="./works.html" title="">Projects</a></li>
+              <li><a href="./downloads.html" title="">Resources</a></li>
+              <li><a href="./music.html" title="">The SkyVerse Music</a></li>
+              <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
+              <!-- Placeholder for camera icon link -->
+              <li class="photo-link-easter-egg"><a href="./photos.html"><i class="fa-solid"></i></a></li> <!-- Added class, removed specific icon -->
+              <li>
+                <a href="contact.html" class="btn badge btn-default" style="
+                  font-family: lettera;
+                  font-size: medium;
+                  margin-left: 10px; /* Add spacing */
+                  background-color: red; /* Change background color to red */
+                  color: white; /* Change text color to white */
+                ">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="section-container-spacer text-center">
+              <h1 style="font-family: dotfont; color:#000; font-size: large;">
+                Photos
+              </h1>
+            </div>
+
+            <!-- Lightbox Gallery Grid -->
+            <div class="row" id="photo-gallery-container">
+              <div class="col-md-6 col-sm-6">
+                <a href="pxl/NOAA-19-20240301-212648-histeq.jpg" data-lightbox="gallery" data-title="NOAA-19-20240301-212648-histeq.jpg" class="photo-thumbnail">
+                  <div class="game-target"></div>
+                  <img src="pxl/NOAA-19-20240301-212648-histeq.jpg" alt="NOAA 19 Image 1">
+                </a>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <a href="pxl/NOAA-19-20240301-212648-MCIR-precip.jpg" data-lightbox="gallery" data-title="NOAA-19-20240301-212648-MCIR-precip.jpg" class="photo-thumbnail">
+                   <div class="game-target"></div>
+                  <img src="pxl/NOAA-19-20240301-212648-MCIR-precip.jpg" alt="NOAA 19 Image 2">
+                </a>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <a href="pxl/NOAA-15-20240227-074419-MCIR-precip.jpg" data-lightbox="gallery" data-title="NOAA-15-20240227-074419-MCIR-precip.jpg" class="photo-thumbnail">
+                   <div class="game-target"></div>
+                  <img src="pxl/NOAA-15-20240227-074419-MCIR-precip.jpg" alt="NOAA 15 Image 1">
+                </a>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <a href="pxl/NOAA-15-20240227-074419-histeq.jpg" data-lightbox="gallery" data-title="NOAA-15-20240227-074419-histeq.jpg" class="photo-thumbnail">
+                   <div class="game-target"></div>
+                  <img src="pxl/NOAA-15-20240227-074419-histeq.jpg" alt="NOAA 15 Image 2">
+                </a>
+              </div>
+            </div>
+            <!-- End Lightbox Gallery Grid -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-container text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p style="font-family:dotfont">© SARAT CHANDRA, 2025 | ALL IMAGES ARE IP | USES NOTHING (R) FONTS</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+      });
+    </script>
+
+    <script type="text/javascript" src="./main.70a66962.js"></script>
+    <!-- Explicitly load jQuery before Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Add Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <!-- Link to the external game script -->
+    <script src="./game.js"></script>
+
+  </body>
+</html>

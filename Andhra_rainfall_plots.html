@@ -1,8 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andhra_rainfall_plots</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra_rainfall_plots</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="dark-theme.css"> <!-- Add dark theme CSS -->
+    <!-- Inline script to apply theme early -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+        if (isDark) {
+            document.documentElement.classList.add('dark-theme');
+        }
+        // Define tile layer variables globally for theme-toggle.js
+        const lightTileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const lightAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        const darkTileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+        const darkAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+    </script>
+    
+    <style>
+        /* ... existing styles ... */
+        /* Add styles for the theme toggle button if not already present globally */
+        .theme-toggle-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000; /* Ensure it's above map controls */
+            cursor: pointer;
+            background: var(--background-color, #fff);
+            border: 1px solid var(--border-color, #ccc);
+            border-radius: 50%;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .theme-toggle-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--text-color, #000);
+        }
+        .theme-toggle-btn .moon-icon {
+            display: none; /* Initially hide moon */
+        }
+        html.dark-theme .theme-toggle-btn .sun-icon {
+            display: none;
+        }
+        html.dark-theme .theme-toggle-btn .moon-icon {
+            display: block;
+        }
+    </style>
+    <!-- ... rest of head ... -->
 
 
 
@@ -14615,10 +14668,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-  <a href="Andhra_rainfall_plots_dark.html" title="" class="badge btn-white"
-  >Dark Mode</a
->
-  <h4 id="Plotting-Climate-Data-:-Subsetting-a-region">This page can also be accessed at the <a href="https://github.com/carbform/Climate_Data_Plotting">GitHub repository</a> </h4>
+  <h4 id="Plotting-Climate-Data-:-Subsetting-a-region" style="font-family: Noto Sans;">This page can also be accessed at the <a href="https://github.com/carbform/Climate_Data_Plotting">GitHub repository</a> </h4>
 
   <h1 id="Plotting-Climate-Data-:-Subsetting-a-region">Plotting Climate Data : Subsetting a region<a class="anchor-link" 
   href="#Plotting-Climate-Data-:-Subsetting-a-region">&#182;</a></h1>

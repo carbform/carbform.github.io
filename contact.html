@@ -23,8 +23,32 @@
 
     <title>Contact</title>
 
+    <!-- Apply theme class immediately -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark-theme'); // Apply to <html> for early access
+        } else {
+          document.documentElement.classList.remove('dark-theme');
+        }
+      })();
+    </script>
+
     <link href="./main.3f6952e4.css" rel="stylesheet" />
+    <link href="./dark-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <style>
+      body {
+        padding-top: 70px; /* Add padding for fixed navbar */
+      }
+      .navbar-fixed-top {
+        position: fixed !important; /* Ensure navbar position is fixed */
+        z-index: 1031 !important; /* Ensure navbar stays on top */
+      }
+      /* Leaflet specific overrides - Removed */
       .section-container {
         padding: 40px 0;
       }
@@ -87,17 +111,20 @@
       .address-container a.fa-icon:hover {
         color: #0056b3;
       }
+      .address-container {
+        overflow: hidden;
+      }
       #map {
+        /* position: relative; /* Removed - did not help */
         height: 400px;
         width: 100%;
         margin-top: 20px;
+        /* z-index: 1; /* Removed - did not help */
+      }
+      .leaflet-popup-content {
+        font-size: 14px !important; /* Increase popup font size */
       }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
 
   <body class="">
@@ -105,6 +132,29 @@
     <div id="site-border-right"></div>
     <div id="site-border-top"></div>
     <div id="site-border-bottom"></div>
+    <script type="text/javascript" src="./theme-toggle.js"></script>
+    <!-- Theme toggle container -->
+    <div class="theme-toggle-container">
+      <button class="theme-toggle-btn" onclick="toggleTheme()">
+        <div class="toggle-switch">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <div class="toggle-slider"></div>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </div>
+      </button>
+    </div>
     <!-- Add your content of header -->
     <header>
       <nav class="navbar navbar-fixed-top navbar-default">
@@ -123,7 +173,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav"> <!-- Removed navbar-right class -->
               <li><a href="./index.html" title="">Home</a></li>
               <li><a href="./about.html" title="">About</a></li>
               <li><a href="./pmrf.html" title="">Research</a></li>
@@ -131,6 +181,15 @@
               <li><a href="./downloads.html" title="">Resources</a></li>
               <li><a href="./music.html" title="">The SkyVerse Music</a></li>
               <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
+              <!-- Placeholder for camera icon link -->
+              <li class="photo-link-easter-egg"><a href="./photos.html"><i class="fa-solid"></i></a></li> 
+              <li>
+                <a href="contact.html" class="btn badge btn-default" style="
+                  font-family: lettera;
+            color:#000; font-size: large;"
+              >
+                Contact
+              </a>
             </ul>
           </div>
         </div>
@@ -155,61 +214,71 @@
                 <ul class="list-unstyled text-center">
                   <li>
                     <span class="fa-icon">
-                      <i class="fa fa-at" aria-hidden="true"></i>
+                      <i class="fa-solid fa-at" aria-hidden="true"></i>
                     </span>
                     <a href="mailto:csarat48@gmail.com">csarat48@gmail.com</a>
                   </li>
                   <li>
                     <span class="fa-icon">
-                      <i class="fa fa-at" aria-hidden="true"></i>
+                      <i class="fa-solid fa-at" aria-hidden="true"></i>
                     </span>
                     <a href="mailto:saratc@iisc.ac.in">saratc@iisc.ac.in</a>
                   </li>
-                  <li>
-                    <span class="fa-icon">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    </span>
-                    <a href="https://goo.gl/maps/hPT6qqUPfTixNeJ58">
-                      ICWaR Indian Institute of Science Bengaluru 560012 IN
-                    </a>
-                  </li>
                 </ul>
-                <div id="map"></div>
                 <h3 class="text-center">Connect with me on</h3>
                 <div class="text-center">
-                  <a
-                    href="https://www.facebook.com/sarat.chandra.77715"
-                    title=""
-                    class="fa-icon"
-                  >
-                    <i class="fa fa-facebook"></i>
-                  </a>
+                  
                   <a href="https://twitter.com/csarat" title="" class="fa-icon">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
                   </a>
-                  <a
-                    href="https://www.linkedin.com/in/sarat-chandra-168649105/"
-                    title=""
-                    class="fa-icon"
-                  >
-                    <i class="fa fa-linkedin"></i>
+                  <a href="https://www.instagram.com/csarat47" title="" class="fa-icon">
+                    <i class="fa-brands fa-instagram"></i>
                   </a>
                   <a href="https://github.com/carbform" title="" class="fa-icon">
-                    <i class="fa fa-github"></i>
+                    <i class="fa-brands fa-github"></i>
                   </a>
+                  
+                </div>
+                <h3 class="text-center">Research</h3>
+                <div class="text-center">
                   <a
                     href="https://scholar.google.com/citations?user=M2saBgYAAAAJ&hl=en"
                     title=""
                     class="fa-icon"
                   >
-                    <i class="fa fa-google"></i>
+                    <i class="fa-brands fa-google"></i>
                   </a>
-                  <a href="https://medium.com/@carbform" title="" class="fa-icon">
-                    <i class="fa fa-medium"></i>
+                  <a 
+                    href="https://www.researchgate.net/profile/C-Sarat-Chandra?ev=hdr_xprf" 
+                    title="" 
+                    class="fa-icon"
+                  >
+                     <i class="fa-brands fa-researchgate"></i>
                   </a>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- Map div moved here -->
+        <!-- Address moved here -->
+        <div class="row">
+          <div class="col-xs-12 text-center" style="margin-bottom: 10px;">
+            <ul class="list-unstyled">
+               <li>
+                 <span class="fa-icon">
+                   <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                 </span>
+                 <a href="https://goo.gl/maps/hPT6qqUPfTixNeJ58" style="font-size: 14px;">
+                   ICWaR Indian Institute of Science Bengaluru 560012 IN
+                 </a>
+               </li>
+             </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div id="map"></div>
           </div>
         </div>
       </div>
@@ -226,16 +295,34 @@
     </footer>
 
     <script>
+      var map = null; // Make map variable global
+      var tileLayer = null; // Global reference for tile layer
+
+      // Define Tile Layer URLs HERE, before DOMContentLoaded
+      const lightTileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      const lightAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+      const darkTileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+      const darkAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+      
       document.addEventListener("DOMContentLoaded", function (event) {
         navActivePage();
-
+        
+        // Apply theme class to body as well (might be needed for some CSS selectors)
+        if (document.documentElement.classList.contains('dark-theme')) {
+          document.body.classList.add('dark-theme');
+        }
+        
         // Initialize the map
-        var map = L.map("map").setView([13.0214, 77.567], 15); // Coordinates for ICWaR, IISc
+        map = L.map("map").setView([13.0214, 77.567], 15); // Assign to global map variable
 
-        // Add OpenStreetMap tiles
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        // Determine initial theme - NOW READS FROMdocumentElement
+        const isDark = document.documentElement.classList.contains('dark-theme');
+        const initialTileUrl = isDark ? darkTileUrl : lightTileUrl;
+        const initialAttribution = isDark ? darkAttribution : lightAttribution;
+
+        // Add initial OpenStreetMap tiles
+        tileLayer = L.tileLayer(initialTileUrl, {
+          attribution: initialAttribution
         }).addTo(map);
 
         // Add a marker for ICWaR
@@ -243,6 +330,7 @@
           .addTo(map)
           .bindPopup("Indian Institute of Science, Bengaluru")
           .openPopup();
+        
       });
     </script>
 
@@ -261,5 +349,28 @@
 
 -->
     <script type="text/javascript" src="./main.70a66962.js"></script>
+    <script type="text/javascript" src="./theme-toggle.js"></script>
+    <!-- Theme toggle container -->
+    <div class="theme-toggle-container">
+      <button class="theme-toggle-btn" onclick="toggleTheme()">
+        <div class="toggle-switch">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <div class="toggle-slider"></div>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </div>
+      </button>
+    </div>
   </body>
 </html>
