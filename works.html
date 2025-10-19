@@ -40,9 +40,18 @@
         overflow: hidden;
       }
       
+      body.dark-theme .project-card {
+        background: #1a1a1a;
+        border: 1px solid #333;
+      }
+      
       .project-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      
+      body.dark-theme .project-card:hover {
+        box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
       }
       
       .project-card img {
@@ -67,12 +76,20 @@
         margin-bottom: 10px;
       }
       
+      body.dark-theme .project-number {
+        color: #888;
+      }
+      
       .project-title {
         font-family: 'Noto Sans Mono', monospace;
         color: #000;
         font-size: 18px;
         margin-bottom: 15px;
         font-weight: 600;
+      }
+      
+      body.dark-theme .project-title {
+        color: #fff;
       }
       
       .project-description {
@@ -84,6 +101,18 @@
         margin-bottom: 20px;
       }
       
+      body.dark-theme .project-description {
+        color: #ccc;
+      }
+      
+      .project-description a {
+        color: #0066cc;
+      }
+      
+      body.dark-theme .project-description a {
+        color: #66b3ff;
+      }
+      
       .project-btn {
         display: inline-block;
         padding: 10px 20px;
@@ -92,13 +121,51 @@
         text-decoration: none;
         font-family: 'Noto Sans Mono', monospace;
         font-size: 14px;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease;
         border: 1px solid #000;
       }
       
+      body.dark-theme .project-btn {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #fff;
+      }
+      
       .project-btn:hover {
-        background-color: #333;
-        color: #fff;
+        background-color: #0dbd07 !important;
+        color: #fff !important;
+        border-color: #0dbd07 !important;
+      }
+      
+      body.dark-theme .project-btn:hover {
+        background-color: #0dbd07 !important;
+        color: #fff !important;
+        border-color: #0dbd07 !important;
+      }
+      
+      .project-btn-secondary {
+        background-color: #fff !important;
+        color: #000 !important;
+        border: 1px solid #000 !important;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+      
+      body.dark-theme .project-btn-secondary {
+        background-color: #000 !important;
+        color: #fff !important;
+        border: 1px solid #fff !important;
+      }
+      
+      .project-btn-secondary:hover {
+        background-color: #0dbd07 !important;
+        color: #fff !important;
+        border-color: #0dbd07 !important;
+      }
+      
+      body.dark-theme .project-btn-secondary:hover {
+        background-color: #0dbd07 !important;
+        color: #fff !important;
+        border-color: #0dbd07 !important;
       }
       
       @media (max-width: 768px) {
@@ -185,7 +252,7 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="text-center">
-              <h1 style="font-family: dotfont; color: #000; font-size: x-large">
+              <h1 style="font-family: dotfont; font-size: x-large">
                 PROJECTS
               </h1>
               <p style="font-family: 'Noto Sans', sans-serif; font-size: 16px;">
@@ -206,7 +273,7 @@
                     A modern, minimalistic web application for real-time satellite tracking with interactive orbit visualization and pass prediction capabilities. Track hundreds of satellites on an interactive world map with real-time position updates, orbit paths, and upcoming pass predictions.
                   </p>
                   <a href="https://carbform.github.io/carbsat/" class="project-btn">Launch App</a>
-                  <a href="https://github.com/carbform/carbsat" class="project-btn" style="margin-left: 10px; background-color: #fff; color: #000;">View Code</a>
+                  <a href="https://github.com/carbform/carbsat" class="project-btn project-btn-secondary" style="margin-left: 10px;">View Code</a>
                 </div>
               </div>
 
