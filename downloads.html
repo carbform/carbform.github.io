@@ -4,22 +4,16 @@
     <meta charset="UTF-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width,initial-scale=1" name="viewport" />
-    <meta content="description" name="description" />
+    <meta content="Downloadable resources — lecture notes, notebooks, and presentations" name="description" />
     <meta name="google" content="notranslate" />
-    <meta
-      content="Mashup templates have been developped by Orson.io team"
-      name="author"
-    />
+    <meta content="Sarat Chandra" name="author" />
 
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/apple-icon-180x180.png"
-    />
-    <link href="./assets/favicon.ico" rel="icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png" />
 
     <title>Downloads</title>
 
@@ -33,82 +27,19 @@
     <div id="site-border-top"></div>
     <div id="site-border-bottom"></div>
 
-    <!-- Theme toggle container -->
-    <div class="theme-toggle-container">
-      <button class="theme-toggle-btn" onclick="toggleTheme()">
-        <div class="toggle-switch">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <div class="toggle-slider"></div>
-          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 A7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </div>
-      </button>
-    </div>
+    <!-- Theme toggle -->
+    <div id="shared-theme-toggle"></div>
 
-    <!-- Add your content of header -->
-    <header>
-      <nav class="navbar navbar-fixed-top navbar-default">
-        <div class="container">
-          <button
-            type="button"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar-collapse"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav">
-          <li><a href="./index.html" title="">Home</a></li>
-          <li><a href="./about.html" title="">About</a></li>
-          <li><a href="./droughts.html" title="">Research</a></li>
-          <li><a href="./works.html" title="">Projects</a></li>
-          <li><a href="./downloads.html" title="">Resources</a></li>
-          <li><a href="./music.html" title="">The SkyVerse Music</a></li>
-          <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
-          <li class="photo-link-easter-egg"><a href="./photos.html"><i class="fa-solid"></i></a></li> <!-- Fixed HTML, added class, changed icon -->
-          <li>
-            <a href="contact.html" class="btn badge btn-default" style="
-              font-family: lettera;
-              font-size: medium;
-              margin-left: 10px; /* Add spacing */
-              background-color: red; /* Change background color to red */
-              color: white; /* Change text color to white */
-            ">Contact</a>
-          </li>
-          </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <!-- Navbar -->
+    <header id="shared-header"></header>
 
     <div class="section-container">
       <div class="container">
         <div class="row">
-          <!-- <div class="col-sm-8 col-sm-offset-2 section-container-spacer"> -->
             <div class="text-center">
-              <h1 style="font-family: dotfont;
-            color:#000; font-size: x-large;">RESOURCES</h1>
+              <h1 style="font-family: dotfont; color:#000; font-size: x-large;" class="retro-cursor">RESOURCES</h1>
               <p>
-                <b
-                  >These are some of the resources available for download.</b
-                >
+                <b>These are some of the resources available for download.</b>
               </p>
             </div>
           </div>
@@ -120,84 +51,49 @@
                 <div class="item active">
                   <div class="row">
                     <div class="col-sm-4">
-                      <a
-                        href=""
-                        title=""
-                        class="img-responsive"
-                      >
-                        <img
-                          src="assets/images/ss1.png"
-                          alt=""
-                          class="img-responsive"
-                        />
+                      <a href="" title="" class="img-responsive">
+                        <img src="assets/images/ss1.png" alt="" class="img-responsive" />
                       </a>
                       <div class="card-container card-container-lg">
                         <h4>001/005</h4>
-                        <h3 style="font-family: Noto Sans Mono;
-                        color:#000; font-size: medium;">Intro to Remote Sensing/GIS</h3>
+                        <h3 style="font-family: Noto Sans Mono; color:#000; font-size: medium;">Intro to Remote Sensing/GIS</h3>
                         <p>
                           This is the presenatation I made for my talk at SKDAV Polytehcnic college, Rourkela. It is a graduate level
                           intro to the fundamentals og RS/GIS.
                         </p>
-                        <a
-                          href="assets/pdf-resize.pdf"
-                          title=""
-                          class="btn btn-default"style="font-size: medium;"
-                          >Download PDF</a
-                        >
+                        <a href="assets/pdf-resize.pdf" title="" class="btn btn-default" style="font-size: medium;">Download PDF</a>
                       </div>
                      </div>
                         <div class="col-sm-4">
                       
-                        <img
-                          src="assets/images/ss2.png"
-                          alt=""
-                          class="img-responsive3"
-                        />
+                        <img src="assets/images/ss2.png" alt="" class="img-responsive3" />
                       </a>
                       <div class="card-container card-container-lg">
                         <h4>002/005</h4>
-                        <h3 style="font-family: Noto Sans Mono;
-                        color:#000; font-size: medium;">Visualizing Climate Data</h3>
+                        <h3 style="font-family: Noto Sans Mono; color:#000; font-size: medium;">Visualizing Climate Data</h3>
 
                         <p>
                           Custom codes for plotting climate data using Jupyter/Python.
-                          You can also access them on the <a href="https://github.com/carbform/Climate_Data_Plotting" title=""
-                          >Github repo </a
-                        >for forking/downloading.
+                          You can also access them on the <a href="https://github.com/carbform/Climate_Data_Plotting" title="">Github repo </a>for forking/downloading.
                         </p>
-                        <a href="IMD_Rainfall_Plots.html" title="" class="btn btn-default"
-                        style="font-size: medium;">Jupyter Notebook-1</a
-                        >
-                        <a href="Andhra_rainfall_plots.html" title="" class="btn btn-default" 
-                        style="font-size: medium;"
-                          >Jupyter Notebook-2</a
-                        >
+                        <a href="IMD_Rainfall_Plots.html" title="" class="btn btn-default" style="font-size: medium;">Jupyter Notebook-1</a>
+                        <a href="Andhra_rainfall_plots.html" title="" class="btn btn-default" style="font-size: medium;">Jupyter Notebook-2</a>
                       </div>
                     </div>
                     
                      <div class="col-sm-4">
                      
-                        <img
-                          src="assets/images/hy.jpeg"
-                          alt=""
-                          class="img-responsive3"
-                        />
+                        <img src="assets/images/hy.jpeg" alt="" class="img-responsive3" />
                       </a>
                       <div class="card-container card-container-lg">
                         <h4>003/005</h4>
-                        <h3 style="font-family: Noto Sans Mono;
-                        color:#000; font-size: medium;">Surface Water Hydrology- Part 1</h3>
+                        <h3 style="font-family: Noto Sans Mono; color:#000; font-size: medium;">Surface Water Hydrology- Part 1</h3>
                         <p>
                           These are my handwritten notes of Surface water hydrology based on lectures taught at IISc. You can download the 
                           PDF or the raw .xoj files (for editing). You will need <a href="https://xournalpp.github.io/">Xjournal</a>, an open source app to open the .xoj files.
                         </p>
-                        <a href="assets/swh1.pdf" title="" class="btn btn-default"
-                        style="font-size: medium;">Download PDF</a
-                        >
-                        <a href="assets/swh.xoj" title="" class="btn btn-default"
-                        style="font-size: medium;">Download .xoj file</a
-                      >
+                        <a href="assets/swh1.pdf" title="" class="btn btn-default" style="font-size: medium;">Download PDF</a>
+                        <a href="assets/swh.xoj" title="" class="btn btn-default" style="font-size: medium;">Download .xoj file</a>
                       </div>
                       
                     </div>
@@ -209,50 +105,32 @@
                   <div class="row">
                     <div class="col-sm-4">
                       
-                        <img
-                          src="./assets/images/hy.jpeg"
-                          alt="Image"
-                          class="img-responsive3"
-                        />
+                        <img src="./assets/images/hy.jpeg" alt="Image" class="img-responsive3" />
                       </a>
                       <div class="card-container card-container-lg">
                         <h4>004/005</h4>
-                        <h3 style="font-family: Noto Sans Mono;
-                        color:#000; font-size: medium;">Surface Water Hydrology- Part 2</h3>
+                        <h3 style="font-family: Noto Sans Mono; color:#000; font-size: medium;">Surface Water Hydrology- Part 2</h3>
                         <p>
                           These are my handwritten notes of Surface water hydrology based on lectures taught at IISc. You can download the 
                           PDF or the raw .xoj files (for editing). You will need <a href="https://xournalpp.github.io/">Xjournal</a>, an open source app to open the .xoj files.
                         </p>
-                        <a href="assets/swh2.pdf" title="" class="btn btn-default"
-                          >Download PDF</a
-                        >
-                        <a href="assets/swh2.xoj" title="" class="btn btn-default"
-                        >Download .xoj file</a
-                      >
+                        <a href="assets/swh2.pdf" title="" class="btn btn-default">Download PDF</a>
+                        <a href="assets/swh2.xoj" title="" class="btn btn-default">Download .xoj file</a>
                       </div>
                     </div>
                         <div class="col-sm-4">
-                          <img
-                            src="./assets/images/gwh.webp"
-                            alt="Image"
-                            class="img-responsive3"
-                          />
+                          <img src="./assets/images/gwh.webp" alt="Image" class="img-responsive3" />
                         </a>
 
                         <div class="card-container card-container-lg">
                             <h4>005/005</h4>
-                            <h3 style="font-family: Noto Sans Mono;
-                            color:#000; font-size: medium;">Groundwater Hydrology</h3>
+                            <h3 style="font-family: Noto Sans Mono; color:#000; font-size: medium;">Groundwater Hydrology</h3>
                             <p>
                               These are my handwritten notes of groundwater hydrology based on lectures taught at IISc. You can download the 
                               PDF or the raw .xopp files (for editing). You will need <a href="https://xournalpp.github.io/">Xjournal++</a>, an open source app to open the .xopp/.xoj files.
                             </p>
-                            <a href="assets/gwh1.pdf" title="" class="btn btn-default"
-                              >Download PDF</a
-                            >
-                            <a href="assets/gwh1.xopp" title="" class="btn btn-default"
-                            >Download .xoj/.xopp file</a
-                          >
+                            <a href="assets/gwh1.pdf" title="" class="btn btn-default">Download PDF</a>
+                            <a href="assets/gwh1.xopp" title="" class="btn btn-default">Download .xoj/.xopp file</a>
                         </div>
                         </div>
                         <!--extra item goes here with col-sm-4 and ends with two div-->
@@ -263,19 +141,8 @@
                 <!--/item-->
               </div>
               <!--/carousel-inner-->
-              <a
-                class="left carousel-control"
-                href="#myCarousel"
-                data-slide="prev"
-                ><</a
-              >
-
-              <a
-                class="right carousel-control"
-                href="#myCarousel"
-                data-slide="next"
-                >></a
-              >
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev"><</a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">></a>
             </div>
             <!--/myCarousel-->
           </div>
@@ -283,18 +150,9 @@
       </div>
 
     </div>
-    
-    
 
-    <footer class="footer-container text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <p style="font-family:dotfont; font-size: 16px;">© SARAT CHANDRA, 2025 | DOWNLOADABLE FILES ARE GPLv3 Licence | USES NOTHING (R) FONTS</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- Footer -->
+    <div id="shared-footer" data-text="© SARAT CHANDRA, 2025 | DOWNLOADABLE FILES ARE GPLv3 Licence | USES NOTHING (R) FONTS"></div>
 
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
@@ -303,6 +161,7 @@
     </script>
 
     <script type="text/javascript" src="./main.70a66962.js"></script>
+    <script type="text/javascript" src="./components.js"></script>
     <script type="text/javascript" src="./theme-toggle.js"></script>
   </body>
 </html>
