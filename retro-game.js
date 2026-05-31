@@ -3,12 +3,8 @@
 // ============================================
 
 (function() {
-  // The Konami Code sequence: Up, Up, Down, Down, Left, Right, Left, Right, B, A
-  const konamiCode = [
-    'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 
-    'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 
-    'b', 'a'
-  ];
+  // The Easter Egg sequence: b, l, o, g
+  const konamiCode = ['b', 'l', 'o', 'g'];
   let konamiIndex = 0;
   
   // Game state variables

@@ -32,63 +32,29 @@
       /* Optional: Add some spacing between thumbnails */
       .photo-thumbnail {
         margin-bottom: 15px;
-        display: block; /* Ensure links behave like blocks */
-        position: relative; /* Needed for absolute positioning of image if used later */
-        min-height: 100px; /* Give the container some height even when image is hidden */
-        overflow: hidden; /* Prevent game target from spilling out */
-      }
       .photo-thumbnail img {
-         width: 100%; /* Make images responsive within their columns */
+         width: 100%;
          height: auto;
-         border: 1px solid #ddd; /* Optional: add a light border */
+         border: 2px solid var(--border-color);
          padding: 3px;
-         /* Initially hide images and add transition */
-         opacity: 0;
-         transition: opacity 0.3s ease-in-out;
-         position: absolute; /* Take image out of flow for better control */
-         top: 0;
-         left: 0;
-         pointer-events: none; /* Don't interfere with game target clicks */
-         transition: opacity 0.5s ease-in-out;
+         transition: transform 0.3s ease;
       }
-      .photo-thumbnail img.visible {
-          opacity: 1;
-          position: relative; /* Put visible image back into flow */
-          pointer-events: auto;
+      .photo-thumbnail:hover img {
+         transform: scale(1.02);
       }
       /* Ensure lightbox captions are readable in both themes */
       .lb-data .lb-caption {
-        color: #eee; /* Light color for dark background */
+        color: #eee;
       }
       .light-theme .lb-data .lb-caption {
-         color: #333; /* Dark color for light background */
+         color: #333;
       }
       .light-theme .lb-dataContainer {
-          background-color: rgba(255, 255, 255, 0.9); /* Light background for caption area in light theme */
+          background-color: rgba(255, 255, 255, 0.9);
       }
       .dark-theme .lb-dataContainer {
-          background-color: rgba(0, 0, 0, 0.8); /* Dark background for caption area in dark theme */
+          background-color: rgba(0, 0, 0, 0.8);
       }
-      /* Game Target Styles */
-      .game-target {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        background-color: red;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none; /* Hidden by default */
-        transition: background-color 0.2s;
-        z-index: 10; /* Ensure it's above the hidden image */
-      }
-      .game-target:hover {
-        background-color: darkred;
-      }
-
-      /* Style for unlocked state (optional) */
-       .photo-thumbnail.unlocked .game-target {
-           display: none; /* Hide target once unlocked */
-       }
     </style>
   </head>
 
@@ -176,25 +142,21 @@
             <div class="row" id="photo-gallery-container">
               <div class="col-md-6 col-sm-6">
                 <a href="pxl/NOAA-19-20240301-212648-histeq.jpg" data-lightbox="gallery" data-title="NOAA-19-20240301-212648-histeq.jpg" class="photo-thumbnail">
-                  <div class="game-target"></div>
                   <img src="pxl/NOAA-19-20240301-212648-histeq.jpg" alt="NOAA 19 Image 1">
                 </a>
               </div>
               <div class="col-md-6 col-sm-6">
                 <a href="pxl/NOAA-19-20240301-212648-MCIR-precip.jpg" data-lightbox="gallery" data-title="NOAA-19-20240301-212648-MCIR-precip.jpg" class="photo-thumbnail">
-                   <div class="game-target"></div>
                   <img src="pxl/NOAA-19-20240301-212648-MCIR-precip.jpg" alt="NOAA 19 Image 2">
                 </a>
               </div>
               <div class="col-md-6 col-sm-6">
                 <a href="pxl/NOAA-15-20240227-074419-MCIR-precip.jpg" data-lightbox="gallery" data-title="NOAA-15-20240227-074419-MCIR-precip.jpg" class="photo-thumbnail">
-                   <div class="game-target"></div>
                   <img src="pxl/NOAA-15-20240227-074419-MCIR-precip.jpg" alt="NOAA 15 Image 1">
                 </a>
               </div>
               <div class="col-md-6 col-sm-6">
                 <a href="pxl/NOAA-15-20240227-074419-histeq.jpg" data-lightbox="gallery" data-title="NOAA-15-20240227-074419-histeq.jpg" class="photo-thumbnail">
-                   <div class="game-target"></div>
                   <img src="pxl/NOAA-15-20240227-074419-histeq.jpg" alt="NOAA 15 Image 2">
                 </a>
               </div>
@@ -227,8 +189,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Add Lightbox2 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-    <!-- Link to the external game script -->
-    <script src="./game.js"></script>
 
   </body>
 </html>

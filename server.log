@@ -27,3 +27,15 @@
 127.0.0.1 - - [31/May/2026 23:34:07] "GET /dark-theme.css HTTP/1.1" 304 -
 127.0.0.1 - - [31/May/2026 23:34:07] "GET /components.js HTTP/1.1" 304 -
 127.0.0.1 - - [31/May/2026 23:34:07] "GET /retro-game.js HTTP/1.1" 304 -
+127.0.0.1 - - [31/May/2026 23:40:40] "GET /photos.html?v=3 HTTP/1.1" 200 -
+127.0.0.1 - - [31/May/2026 23:40:40] "GET /dark-theme.css?v=2 HTTP/1.1" 200 -
+127.0.0.1 - - [31/May/2026 23:43:27] "GET /photos.html?v=3 HTTP/1.1" 304 -
+127.0.0.1 - - [31/May/2026 23:43:29] "GET /dark-theme.css HTTP/1.1" 304 -
+127.0.0.1 - - [31/May/2026 23:43:34] "GET /photos.html HTTP/1.1" 200 -
+127.0.0.1 - - [31/May/2026 23:43:38] "GET /components.js HTTP/1.1" 304 -
+127.0.0.1 - - [31/May/2026 23:43:38] "GET /retro-game.js HTTP/1.1" 200 -
+127.0.0.1 - - [31/May/2026 23:44:08] "GET /photos.html HTTP/1.1" 304 -
+127.0.0.1 - - [31/May/2026 23:44:10] "GET /retro-game.js HTTP/1.1" 304 -
+127.0.0.1 - - [31/May/2026 23:44:59] "GET /retro-game.js HTTP/1.1" 304 -
+127.0.0.1 - - [31/May/2026 23:45:36] "GET /retro-game.js HTTP/1.1" 304 -
+127.0.0.1 - - [31/May/2026 23:45:58] "GET /assets/swh1.pdf HTTP/1.1" 200 -
