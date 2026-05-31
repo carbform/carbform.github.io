@@ -66,13 +66,13 @@ function getThemeToggleHTML() {
 }
 
 function getFooterHTML(customText) {
-  const text = customText || '© SARAT CHANDRA, 2025 | ALL IMAGES ARE IP | USES NOTHING (R) FONTS';
+  const text = customText || '© SARAT CHANDRA, 2025 | ALL IMAGES ARE IP';
   return `
     <footer class="footer-container text-center">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <p style="font-family: dotfont; font-size: 14px;">${text}</p>
+            <p style="font-family: var(--font-mono); font-size: 14px; font-weight: 600; text-transform: uppercase;">${text}</p>
           </div>
         </div>
       </div>

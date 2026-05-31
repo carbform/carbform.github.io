@@ -29,35 +29,42 @@
 
       .project-card {
         background: var(--bg-card, #fff);
-        border: 1px solid var(--border-color, #e0e0e0);
-        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        border: 3px solid var(--brutal-border, #000);
+        box-shadow: 6px 6px 0px 0px var(--brutal-border, #000);
+        transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
         overflow: hidden;
       }
 
       body.dark-theme .project-card {
         background: var(--bg-card);
-        border: 1px solid var(--border-subtle);
+        border: 3px solid var(--brutal-border);
+        box-shadow: 6px 6px 0px 0px var(--brutal-border);
       }
 
       .project-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transform: translate(3px, 3px);
+        box-shadow: 3px 3px 0px 0px var(--brutal-border, #000);
       }
 
       body.dark-theme .project-card:hover {
-        box-shadow: var(--card-shadow);
-        border-color: rgba(255, 176, 0, 0.25);
+        box-shadow: 3px 3px 0px 0px var(--brutal-border);
+        border-color: var(--accent-amber);
       }
 
       .project-card img {
         width: 100%;
         height: 250px;
         object-fit: cover;
-        transition: opacity 0.3s ease;
+        border-bottom: 3px solid var(--brutal-border, #000);
+        transition: filter 0.3s ease;
+      }
+
+      body.dark-theme .project-card img {
+        border-bottom: 3px solid var(--brutal-border);
       }
 
       .project-card:hover img {
-        opacity: 0.92;
+        filter: brightness(1.1);
       }
 
       .project-content {
@@ -65,22 +72,23 @@
       }
 
       .project-number {
-        font-family: 'Noto Sans Mono', monospace;
-        color: var(--number-color, #b8a080);
+        font-family: var(--font-mono);
+        color: var(--number-color, #171717);
         font-size: 14px;
         margin-bottom: 10px;
+        font-weight: 600;
       }
 
       body.dark-theme .project-number {
-        color: var(--text-muted);
+        color: var(--number-color);
       }
 
       .project-title {
-        font-family: 'Noto Sans Mono', monospace;
-        color: #000;
-        font-size: 18px;
+        font-family: var(--font-sans);
+        color: var(--text-primary);
+        font-size: 20px;
         margin-bottom: 15px;
-        font-weight: 600;
+        font-weight: 700;
       }
 
       body.dark-theme .project-title {
@@ -88,11 +96,11 @@
       }
 
       .project-description {
-        font-family: 'Noto Sans', sans-serif;
-        color: #333;
-        font-size: 14px;
+        font-family: var(--font-sans);
+        color: var(--text-secondary);
+        font-size: 15px;
         line-height: 1.6;
-        text-align: justify;
+        text-align: left;
         margin-bottom: 20px;
       }
 
@@ -101,7 +109,8 @@
       }
 
       .project-description a {
-        color: #0066cc;
+        color: var(--link-color);
+        font-weight: 600;
       }
 
       body.dark-theme .project-description a {
@@ -111,61 +120,74 @@
       .project-btn {
         display: inline-block;
         padding: 10px 20px;
-        background-color: #1a1a1a;
-        color: #fdf8f0;
+        background-color: var(--accent-red);
+        color: #fff !important;
         text-decoration: none;
-        font-family: 'Noto Sans Mono', monospace;
+        font-family: var(--font-mono);
         font-size: 14px;
-        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-        border: 1px solid #1a1a1a;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: 2px solid var(--brutal-border, #000);
+        box-shadow: 4px 4px 0px 0px var(--brutal-border, #000);
+        transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
       }
 
       body.dark-theme .project-btn {
-        background-color: #222;
-        color: #fff;
-        border: 1px solid #444;
+        background-color: var(--accent-violet);
+        border: 2px solid var(--brutal-border);
+        box-shadow: 4px 4px 0px 0px var(--brutal-border);
       }
 
       .project-btn:hover {
-        background-color: var(--accent-teal, #2a9d8f) !important;
-        color: #fff !important;
-        border-color: var(--accent-teal, #2a9d8f) !important;
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px 0px var(--brutal-border, #000);
+        background-color: var(--accent-teal) !important;
       }
 
       body.dark-theme .project-btn:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px 0px var(--brutal-border);
         background-color: var(--accent-amber) !important;
-        color: #0d0c0a !important;
-        border-color: var(--accent-amber) !important;
+        color: #171717 !important;
       }
 
       .project-btn-secondary {
-        background-color: var(--bg-card, #fffaf3) !important;
-        color: var(--text-primary, #1a1a1a) !important;
-        border: 1px solid var(--border-subtle, #c9bfb0) !important;
-        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        background-color: var(--bg-card) !important;
+        color: var(--text-primary) !important;
+        border: 2px solid var(--brutal-border, #000) !important;
+        box-shadow: 4px 4px 0px 0px var(--brutal-border, #000) !important;
+        transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
       }
 
       body.dark-theme .project-btn-secondary {
-        background-color: var(--bg-card) !important;
-        color: var(--text-primary) !important;
-        border: 1px solid #444 !important;
+        border: 2px solid var(--brutal-border) !important;
+        box-shadow: 4px 4px 0px 0px var(--brutal-border) !important;
       }
 
       .project-btn-secondary:hover {
-        background-color: var(--accent-teal, #2a9d8f) !important;
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px 0px var(--brutal-border, #000) !important;
+        background-color: var(--accent-gold) !important;
         color: #fff !important;
-        border-color: var(--accent-teal, #2a9d8f) !important;
       }
 
       body.dark-theme .project-btn-secondary:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px 0px var(--brutal-border) !important;
         background-color: var(--accent-amber) !important;
-        color: #0d0c0a !important;
-        border-color: var(--accent-amber) !important;
+        color: #171717 !important;
       }
 
       @media (max-width: 768px) {
         .projects-grid {
           grid-template-columns: 1fr;
+        }
+        .project-btn {
+          display: block;
+          width: 100%;
+          margin-left: 0 !important;
+          margin-bottom: 10px;
+          text-align: center;
         }
       }
     </style>
