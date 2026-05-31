@@ -1,74 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* ============================================
-   CSS Custom Properties — Neo-Brutalist Palette
+   CSS Custom Properties — Neo-Retro Palette
    ============================================ */
 :root {
-  --bg-primary: #f9f7f2;
-  --bg-secondary: #ffffff;
+  --bg-primary: #fdf8f0;
+  --bg-secondary: #f5efe3;
   --bg-card: #ffffff;
-  --text-primary: #171717;
-  --text-secondary: #2b2b2b;
-  --text-muted: #5a5a5a;
-  --border-color: #000000;
-  --border-subtle: #000000;
-  --brutal-border: #000000;
+  --text-primary: #2b2b2b;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6b6b6b;
+  --border-color: #1a1a1a;
+  --border-subtle: #1a1a1a;
+  --brutal-border: #1a1a1a;
   
-  --accent-green: #a3ff12;
-  --accent-red: #bc4749;
-  --accent-amber: #cea964;
-  --accent-teal: #0b132b;
-  --accent-coral: #bc4749;
-  --accent-sage: #a3ff12;
-  --accent-violet: #0b132b;
+  --accent-green: #8FBC8F;
+  --accent-red: #d96c6c;
+  --accent-amber: #e6b35c;
+  --accent-teal: #3b5c73;
+  --accent-coral: #d96c6c;
+  --accent-sage: #8FBC8F;
+  --accent-violet: #4a5c73;
   
-  --link-color: #0b132b;
-  --link-hover: #bc4749;
+  --link-color: #3b5c73;
+  --link-hover: #d96c6c;
   --glow-none: none;
   --heading-glow: none;
   
   /* Brutalist hard solid offset shadow */
-  --card-shadow: 6px 6px 0px 0px #000000;
-  --hover-shadow: 3px 3px 0px 0px #000000;
+  --card-shadow: 6px 6px 0px 0px #1a1a1a;
+  --hover-shadow: 3px 3px 0px 0px #1a1a1a;
   
-  --footer-text: #171717;
-  --number-color: #171717;
-  --nav-hover-bg: #a3ff12;
+  --footer-text: #2b2b2b;
+  --number-color: #2b2b2b;
+  --nav-hover-bg: #e6b35c;
   
   --font-sans: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 }
 
-/* Inverted Brutalist for dark mode */
+/* Softer Neo-Retro for dark mode */
 .dark-theme {
-  --bg-primary: #171717;
-  --bg-secondary: #0b132b;
-  --bg-card: #2b2b2b;
-  --text-primary: #f9f7f2;
-  --text-secondary: #eaeaea;
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252525;
+  --bg-card: #2a2a2a;
+  --text-primary: #eaeaea;
+  --text-secondary: #c9c9c9;
   --text-muted: #a0a0a0;
-  --border-color: #ffffff;
-  --border-subtle: #ffffff;
-  --brutal-border: #ffffff;
+  --border-color: #d4d4d4;
+  --border-subtle: #d4d4d4;
+  --brutal-border: #d4d4d4;
   
-  --accent-green: #a3ff12;
-  --accent-amber: #cea964;
-  --accent-teal: #a3ff12;
-  --accent-coral: #bc4749;
-  --accent-sage: #cea964;
-  --accent-violet: #bc4749;
+  --accent-green: #8abf7c;
+  --accent-amber: #d4a355;
+  --accent-teal: #7ebfb2;
+  --accent-coral: #d96c6c;
+  --accent-sage: #8abf7c;
+  --accent-violet: #a390b3;
   
-  --link-color: #a3ff12;
-  --link-hover: #ffffff;
+  --link-color: #8abf7c;
+  --link-hover: #d4d4d4;
   --heading-glow: none;
   
   /* Solid hard offset shadows for dark mode */
-  --card-shadow: 6px 6px 0px 0px #a3ff12;
-  --hover-shadow: 3px 3px 0px 0px #a3ff12;
+  --card-shadow: 6px 6px 0px 0px #8abf7c;
+  --hover-shadow: 3px 3px 0px 0px #8abf7c;
   
-  --footer-text: #f9f7f2;
-  --number-color: #a3ff12;
-  --nav-hover-bg: #bc4749;
+  --footer-text: #eaeaea;
+  --number-color: #8abf7c;
+  --nav-hover-bg: #4a5c73;
 }
 
 /* ============================================

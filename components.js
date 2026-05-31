@@ -23,7 +23,6 @@ function getNavbarHTML() {
             <li><a href="./works.html">Projects</a></li>
             <li><a href="./downloads.html">Resources</a></li>
             <li><a href="./music.html">The SkyVerse Music</a></li>
-            <li><a href="https://carbform.medium.com/" title="">Blog</a></li>
             <li class="photo-link-easter-egg"><a href="./photos.html"><i class="fa-solid"></i></a></li>
             <li>
               <a href="contact.html" class="btn badge btn-default nav-contact-btn">Contact</a>
@@ -66,7 +65,7 @@ function getThemeToggleHTML() {
 }
 
 function getFooterHTML(customText) {
-  const text = customText || '© SARAT CHANDRA, 2025 | ALL IMAGES ARE IP';
+  const text = customText || '© SARAT CHANDRA, 2026 | ALL IMAGES ARE IP';
   return `
     <footer class="footer-container text-center">
       <div class="container">
@@ -145,3 +144,11 @@ if (document.readyState === 'loading') {
   initSharedComponents();
   initTypingEffect();
 }
+
+// Global Easter Egg Injection
+(function injectRetroGame() {
+  const script = document.createElement('script');
+  script.src = './retro-game.js';
+  script.async = true;
+  document.body.appendChild(script);
+})();
