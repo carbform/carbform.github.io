@@ -1,38 +1,55 @@
 /* ============================================
    CSS Custom Properties — Neo-Retro Palette
+   Pantone-inspired retro-vintage color system
    ============================================ */
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f8f8;
-  --bg-card: #fff;
-  --text-primary: #000000;
-  --text-secondary: #333333;
-  --text-muted: #666666;
-  --border-color: #e0e0e0;
-  --border-subtle: #cccccc;
+  --bg-primary: #fdf8f0;
+  --bg-secondary: #f5efe3;
+  --bg-card: #fffaf3;
+  --text-primary: #1a1a1a;
+  --text-secondary: #3d3632;
+  --text-muted: #7a6f66;
+  --border-color: #ddd5c8;
+  --border-subtle: #c9bfb0;
   --accent-green: #0dbd07;
-  --accent-red: red;
-  --link-color: #0066cc;
-  --link-hover: #004499;
+  --accent-red: #c75233;
+  --accent-amber: #d4890b;
+  --accent-teal: #2a9d8f;
+  --accent-coral: #e07a5f;
+  --accent-sage: #81b29a;
+  --accent-violet: #7b6d8d;
+  --link-color: #2a6b5a;
+  --link-hover: #1b4a3e;
   --glow-none: none;
   --heading-glow: none;
-  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --card-shadow: 0 8px 20px rgba(90, 70, 40, 0.06);
+  --footer-text: #d4890b;
+  --number-color: #b8a080;
+  --nav-hover-bg: #efe7d8;
 }
 
 .dark-theme {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #111111;
-  --bg-card: #1a1a1a;
-  --text-primary: #e8e8e8;
-  --text-secondary: #cccccc;
-  --text-muted: #888888;
-  --border-color: #2a2a2a;
-  --border-subtle: #333333;
-  --accent-green: #00ff41;
-  --link-color: #409cff;
-  --link-hover: #66b3ff;
-  --heading-glow: 0 0 8px rgba(0, 255, 65, 0.15);
-  --card-shadow: 0 10px 25px rgba(0, 255, 65, 0.05);
+  --bg-primary: #0d0c0a;
+  --bg-secondary: #14120f;
+  --bg-card: #1c1915;
+  --text-primary: #e8e2d6;
+  --text-secondary: #c4b8a5;
+  --text-muted: #8a7e6e;
+  --border-color: #2e2a24;
+  --border-subtle: #3a352d;
+  --accent-green: #81b29a;
+  --accent-amber: #ffb000;
+  --accent-teal: #2ec4b6;
+  --accent-coral: #e07a5f;
+  --accent-sage: #a3c9b3;
+  --accent-violet: #9b8eb7;
+  --link-color: #e0a548;
+  --link-hover: #f0c060;
+  --heading-glow: 0 0 10px rgba(255, 176, 0, 0.12);
+  --card-shadow: 0 8px 20px rgba(255, 176, 0, 0.04);
+  --footer-text: #ffb000;
+  --number-color: #7a6e5e;
+  --nav-hover-bg: #252218;
 }
 
 /* ============================================
@@ -66,22 +83,28 @@ html.dark-theme,
 
 .dark-theme .navbar-nav > li > a:hover,
 .dark-theme .navbar-nav > li > a:focus {
-  color: #ffffff !important;
-  background-color: #222 !important;
+  color: var(--accent-amber) !important;
+  background-color: var(--nav-hover-bg) !important;
 }
 
 .dark-theme .navbar-nav > li::before {
   background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-/* Contact button — always red */
+/* Contact button — retro coral accent */
 .navbar-nav > li > a.btn.badge,
 .nav-contact-btn {
-  background-color: var(--accent-red) !important;
+  background-color: var(--accent-coral) !important;
   color: white !important;
   font-family: lettera;
   font-size: medium;
   margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav > li > a.btn.badge:hover,
+.nav-contact-btn:hover {
+  background-color: var(--accent-red) !important;
 }
 
 /* Mobile navbar */
@@ -126,11 +149,17 @@ html.dark-theme,
   color: var(--text-primary) !important;
 }
 
-/* Subtle glow on section headings in dark mode */
+/* Subtle warm glow on section headings in dark mode */
 .dark-theme h1[style*="font-family: dotfont"],
 .dark-theme .section-container-spacer h1,
 .dark-theme .project-title {
   text-shadow: var(--heading-glow) !important;
+}
+
+/* Retro-tinted heading accent — amber underline on dotfont headings */
+.dark-theme h1[style*="font-family: dotfont"]::after,
+.dark-theme .retro-cursor::after {
+  color: var(--accent-amber) !important;
 }
 
 /* ============================================
@@ -321,7 +350,7 @@ html.dark-theme,
 }
 
 .dark-theme .theme-toggle-btn:hover .toggle-switch {
-  box-shadow: 0 2px 8px rgba(0, 255, 65, 0.15) !important;
+  box-shadow: 0 2px 8px rgba(255, 176, 0, 0.2) !important;
 }
 
 .dark-theme .theme-toggle-btn {
@@ -402,7 +431,7 @@ h3[style*="font-family: Lettera"],
 .dark-theme h3[style*="font-family: Lettera"],
 .dark-theme .section-container h3 {
   color: var(--text-primary) !important;
-  border-bottom-color: #444 !important;
+  border-bottom-color: var(--border-subtle) !important;
 }
 
 h3[style*="font-family: Lettera"] + ul,
@@ -449,13 +478,22 @@ h3[style*="font-family: Lettera"] + ul,
 /* ============================================
    Footer
    ============================================ */
+.footer-container {
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+}
+
+.footer-container p {
+  color: var(--footer-text) !important;
+}
+
 .dark-theme .footer-container {
   background-color: var(--bg-card) !important;
   border-top: 1px solid var(--border-subtle) !important;
 }
 
 .dark-theme .footer-container p {
-  color: var(--accent-green) !important;
+  color: var(--footer-text) !important;
 }
 
 /* ============================================
@@ -487,8 +525,8 @@ h3[style*="font-family: Lettera"] + ul,
 .dark-theme input:focus,
 .dark-theme textarea:focus,
 .dark-theme select:focus {
-  border-color: #555;
-  box-shadow: 0 0 0 0.2rem rgba(0, 255, 65, 0.1);
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 0.2rem rgba(46, 196, 182, 0.15);
 }
 
 /* ============================================
@@ -748,7 +786,7 @@ iframe {
 }
 
 .dark-theme .text-center h1.small {
-  color: var(--accent-green) !important;
+  color: var(--accent-teal) !important;
 }
 
 .dark-theme .text-center h1[style*="color:rgb(0, 60, 255)"] {

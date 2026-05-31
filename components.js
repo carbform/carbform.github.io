@@ -106,7 +106,42 @@ function initSharedComponents() {
   }
 }
 
+function initTypingEffect() {
+  const titles = document.querySelectorAll('.retro-cursor, h1[style*="font-family: dotfont"], h1[style*="font-family: Lettera"]');
+  titles.forEach(title => {
+    // Only apply if we haven't already applied the typing effect
+    if (!title.hasAttribute('data-typed')) {
+      const text = title.textContent.trim();
+      
+      // Skip if empty or contains child elements (except our own typed text)
+      if (!text || title.querySelector('*')) return;
+      
+      title.setAttribute('data-typed', 'true');
+      title.textContent = ''; // clear text
+      
+      let i = 0;
+      function typeChar() {
+        if (i < text.length) {
+          title.textContent += text.charAt(i);
+          i++;
+          // Slower typing speed to match Typed.js (approx 70-150ms per char)
+          setTimeout(typeChar, Math.random() * 80 + 70);
+        }
+      }
+      
+      // Start typing after a short delay
+      setTimeout(typeChar, 500);
+    }
+  });
+}
+
 // Auto-init when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    initSharedComponents();
+    initTypingEffect();
+  });
+} else {
   initSharedComponents();
-});
+  initTypingEffect();
+}

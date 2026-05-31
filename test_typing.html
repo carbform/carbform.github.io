@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 class="retro-cursor">PROJECTS</h1>
+<script>
+function initTypingEffect() {
+  const titles = document.querySelectorAll('.retro-cursor');
+  console.log("Found titles:", titles.length);
+  titles.forEach(title => {
+    if (title.children.length === 0) {
+      const text = title.textContent.trim();
+      title.textContent = ''; // clear text
+      console.log("Typing text:", text);
+      let i = 0;
+      function typeChar() {
+        if (i < text.length) {
+          title.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeChar, 10);
+        } else {
+          console.log("Finished typing:", title.textContent);
+        }
+      }
+      setTimeout(typeChar, 10);
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded', initTypingEffect);
+</script>
+</body>
+</html>
